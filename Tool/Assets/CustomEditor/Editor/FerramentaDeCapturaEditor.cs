@@ -160,6 +160,53 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
         #endregion
     }
     #region Métodos
+	private void SetParameters()
+	{
+		if(GameObject.FindGameObjectWithTag("Spawn") == null)
+		{
+			spawn = new GameObject();
+			spawn.name = "PosiçãoDeCapituraPadrão";
+			spawn.tag = "Spawn";
+		}
+		else
+		{
+			spawn = GameObject.FindGameObjectWithTag("Spawn");
+		}
+		
+		nomeDaPasta = "IconesTOS";
+		prefabsPathName = "Items";
+		camera = Camera.main.gameObject;
+
+		if(camera.GetComponent<ScreenShoot>() == null)
+		{
+			camera.AddComponent<ScreenShoot>();
+		}
+		
+		width = 1024;
+		height = 1024;
+	}
+	private void SetPrefabs()
+	{
+		EditorGUI.indentLevel++;
+	
+		if(prefabsPathName == null || prefabsPathName == "" || Resources.LoadAll(prefabsPathName, typeof(GameObject)) == null)
+		{
+			Debug.Log("Pasta inesistente ou vazia!");
+		}
+		else
+		{
+			itemsPrefabs = Resources.LoadAll(prefabsPathName, typeof(GameObject));
+		}
+
+		int arraySize = Mathf.Max(0, EditorGUILayout.IntField("Quantidade", itemsPrefabs.Length));
+
+		for(int i = 0; i < itemsPrefabs.Length; i++)
+		{
+			itemsPrefabs[i] = EditorGUILayout.ObjectField("Element " + i, itemsPrefabs[i], typeof(GameObject), false) as GameObject;
+		}
+
+		EditorGUI.indentLevel--;
+	}
     void OnWizardCreate()
     {
 		if(nomeDaPasta == "" || nomeDaPasta == null)
@@ -223,48 +270,6 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 			Debug.Log("No ScreenShoot component!");
 		}
     }
-	private void SetParameters()
-	{
-		if(spawn == null)
-		{
-			spawn = new GameObject();
-			spawn.name = "PosiçãoDeCapituraPadrão";
-		}
-		
-		nomeDaPasta = "IconesTOS";
-		prefabsPathName = "Items";
-		camera = Camera.main.gameObject;
-
-		if(camera.GetComponent<ScreenShoot>() == null)
-		{
-			camera.AddComponent<ScreenShoot>();
-		}
-		
-		width = 1024;
-		height = 1024;
-	}
-	private void SetPrefabs()
-	{
-		EditorGUI.indentLevel++;
-	
-		if(prefabsPathName == null || prefabsPathName == "" || Resources.LoadAll(prefabsPathName, typeof(GameObject)) == null)
-		{
-			Debug.Log("Pasta inesistente ou vazia!");
-		}
-		else
-		{
-			itemsPrefabs = Resources.LoadAll(prefabsPathName, typeof(GameObject));
-		}
-
-		int arraySize = Mathf.Max(0, EditorGUILayout.IntField("Quantidade", itemsPrefabs.Length));
-
-		for(int i = 0; i < itemsPrefabs.Length; i++)
-		{
-			itemsPrefabs[i] = EditorGUILayout.ObjectField("Element " + i, itemsPrefabs[i], typeof(GameObject), false) as GameObject;
-		}
-
-		EditorGUI.indentLevel--;
-	}
 	private void Reset()
 	{
 		width = 0;
