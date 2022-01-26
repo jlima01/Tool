@@ -264,7 +264,7 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
     private void GenerateImages()
     {
 		if(camera.GetComponent<ScreenShoot>() != null)
-    		camera.GetComponent<ScreenShoot>().TakeScreenShoot(width, height, itemId, spawn.transform, nomeDaPasta);
+    		camera.GetComponent<ScreenShoot>().TakeScreenShoot(Camera.main.pixelWidth, Camera.main.pixelHeight, itemId, spawn.transform, nomeDaPasta);
 		else
 		{
 			Debug.Log("No ScreenShoot component!");
@@ -277,6 +277,12 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 		i = 0;
 		camera = null;
 		spawn = null;
+		
+		if(GameObject.FindGameObjectWithTag("Spawn") != null)
+		{
+			DestroyImmediate(GameObject.FindGameObjectWithTag("Spawn"));
+		}
+		
 		nomeDaPasta = "";
 		prefabsPathName = "";
 	}

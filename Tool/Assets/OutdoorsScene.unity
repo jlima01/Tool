@@ -568,7 +568,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1
+  orthographic size: 1.7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -735,7 +735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc2425c61264c5c4ea033759c8231e44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: Crystal Staff
+  itemId: Bow1
 --- !u!1 &2013410473
 GameObject:
   m_ObjectHideFlags: 1

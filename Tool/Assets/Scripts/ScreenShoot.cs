@@ -4,7 +4,7 @@ using UnityEngine;
 using System.IO;
 public class ScreenShoot : MonoBehaviour
 {
-    int width, height;
+    int width, height, clipX, clipY;
 	string folderName;
 	public string itemId;
 	private GameObject itemObj;
@@ -12,9 +12,18 @@ public class ScreenShoot : MonoBehaviour
     public IEnumerator CreatePicture()
     {
     	yield return new WaitForEndOfFrame();
-    	Texture2D texture = new Texture2D(width, height, TextureFormat.RGBA32, true); 
 
-    	texture.ReadPixels(new Rect(0, 0, width, height), 0, 0);
+		if(width > height)
+		{
+			clipX = width - height;
+		}
+		else if(height > width)
+		{
+			clipY = height - width;
+		}
+    	Texture2D texture = new Texture2D(width - clipX, height - clipY, TextureFormat.RGBA32, true); 
+
+    	texture.ReadPixels(new Rect(clipX/2, clipY/2, width - clipX, height - clipY), 0, 0);
     	texture.Apply();
 
     	byte[] bytes = texture.EncodeToPNG();
