@@ -23,19 +23,12 @@ public class ScreenShoot : MonoBehaviour
 
         if(Directory.Exists(Application.dataPath + "/" + folderName))
 		{
-			if(File.Exists(path))
-			{
-				File.WriteAllBytes(path, bytes);
-			}
-			else
-			{
-				Debug.Log("File not founded!");
-			}
+			File.WriteAllBytes(path, bytes);
 		}
 		else
-			{
-				Debug.Log("Directory not founded!");
-			}
+		{
+			Debug.Log("Directory not founded!");
+		}
 
     	DestroyImmediate(texture);
 
