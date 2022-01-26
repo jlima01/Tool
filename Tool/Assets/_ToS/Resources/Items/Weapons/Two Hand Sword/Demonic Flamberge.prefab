@@ -9,8 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7987648609469026939}
-  - component: {fileID: 5288799326399873562}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Demonic Flamberge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,24 +26,12 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5607141352420269977}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5288799326399873562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7318917548265375937}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54a5f4a430e5a6a4eb0fb6f52988d8da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Type: 8
 --- !u!1001 &6288431029618335535
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60,7 +47,7 @@ PrefabInstance:
     - target: {fileID: 1287958310991452684, guid: c7ca4f0210a0b8a4f8c02c63c9d33390,
         type: 3}
       propertyPath: m_Layer
-      value: 13
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1915278809911263414, guid: c7ca4f0210a0b8a4f8c02c63c9d33390,
         type: 3}
@@ -135,12 +122,12 @@ PrefabInstance:
     - target: {fileID: 8266164538961798539, guid: c7ca4f0210a0b8a4f8c02c63c9d33390,
         type: 3}
       propertyPath: m_Layer
-      value: 13
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8467597067901291028, guid: c7ca4f0210a0b8a4f8c02c63c9d33390,
         type: 3}
       propertyPath: m_Layer
-      value: 13
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7ca4f0210a0b8a4f8c02c63c9d33390, type: 3}
