@@ -247,6 +247,23 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 		{
 			Instantiate(itemsPrefabs[counter], spawn.transform.position, spawn.transform.rotation, spawn.transform);
 			itemId = itemsPrefabs[counter].name;
+
+			GameObject item = itemsPrefabs[counter] as GameObject;
+
+			if(item.GetComponentInChildren<MeshFilter>() != null)
+			{
+				Mesh mesh = item.GetComponentInChildren<MeshFilter>().sharedMesh;
+				camera.transform.position = mesh.bounds.center;
+				//Debug.Log(mesh.bounds);
+			}
+			else if(item.GetComponentInChildren<SkinnedMeshRenderer>() != null)
+			{
+				Mesh mesh = item.GetComponentInChildren<SkinnedMeshRenderer>().sharedMesh;
+				camera.transform.position = mesh.bounds.center;
+				//Debug.Log(mesh.bounds);
+			}
+			
+
 			GenerateImages();
 
 			i++;
