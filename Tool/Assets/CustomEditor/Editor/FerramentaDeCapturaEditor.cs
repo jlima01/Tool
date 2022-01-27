@@ -8,7 +8,7 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 	public GameObject camera, spawn;
 	public int width, height;
 	int i = 0;
-	bool showBackgrounds = false;
+	bool showBackgrounds = false, buttonPressed = false;
 	public string nomeDaPasta = "IconesDosItens", prefabsPathName = "";
 	string itemId = "item";
 	private bool itemCreated, spawning, OpenedFoldable;
@@ -139,10 +139,21 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 			SetPrefabs();
         }
 
-        if (GUILayout.Button("Gerar Imagens"))
-        {
-            SpawnItems();
-        }
+        if(!buttonPressed)
+		{
+			if (GUILayout.Button("Gerar Imagens"))
+			{
+				SpawnItems();
+				buttonPressed = true;
+			}
+		}
+		else
+		{
+			for(i = 1; i < itemsPrefabs.Length;)
+			{
+				SpawnItems();
+			}
+		}
 
         if (GUILayout.Button("Resetar"))
         {
@@ -167,6 +178,7 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 			spawn = new GameObject();
 			spawn.name = "PosiçãoDeCapituraPadrão";
 			spawn.tag = "Spawn";
+			//spawn.transform.rotation = Quaternion.Euler(0 , 0, -45);
 		}
 		else
 		{
@@ -249,18 +261,31 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 			itemId = itemsPrefabs[counter].name;
 
 			GameObject item = itemsPrefabs[counter] as GameObject;
+			float cameraDistance = 2.0f;
 
 			if(item.GetComponentInChildren<MeshFilter>() != null)
 			{
 				Mesh mesh = item.GetComponentInChildren<MeshFilter>().sharedMesh;
-				camera.transform.position = mesh.bounds.center;
-				//Debug.Log(mesh.bounds);
+				Vector3 objectSizes = mesh.bounds.max - mesh.bounds.min;
+				float objectSize = Mathf.Max(objectSizes.x, objectSizes.y, objectSizes.z);
+				float cameraView = 2.0f * Mathf.Tan(0.5f * Mathf.Deg2Rad * Camera.main.fieldOfView);
+				float distance = cameraDistance * objectSize / cameraView;
+				distance += 0.5f * objectSize;
+				camera.transform.position = mesh.bounds.center - distance * camera.transform.forward;
+				//camera.transform.position = new Vector3(mesh.bounds.center.x, mesh.bounds.center.y, camera.transform.position.z);
+				Debug.Log(Camera.main.fieldOfView);
 			}
 			else if(item.GetComponentInChildren<SkinnedMeshRenderer>() != null)
 			{
 				Mesh mesh = item.GetComponentInChildren<SkinnedMeshRenderer>().sharedMesh;
-				camera.transform.position = mesh.bounds.center;
-				//Debug.Log(mesh.bounds);
+				Vector3 objectSizes = mesh.bounds.max - mesh.bounds.min;
+				float objectSize = Mathf.Max(objectSizes.x, objectSizes.y, objectSizes.z);
+				float cameraView = 2.0f * Mathf.Tan(0.5f * Mathf.Deg2Rad * Camera.main.fieldOfView);
+				float distance = cameraDistance * objectSize / cameraView;
+				distance += 0.5f * objectSize;
+				camera.transform.position = mesh.bounds.center - distance * camera.transform.forward;
+				//camera.transform.position = new Vector3(mesh.bounds.center.x, mesh.bounds.center.y, camera.transform.position.z);
+				Debug.Log(Camera.main.fieldOfView);
 			}
 			
 
@@ -270,6 +295,7 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 
 			if(i > itemsPrefabs.Length - 1)
 			{
+				buttonPressed = false;
 				i = 0;
 			}
 		}
