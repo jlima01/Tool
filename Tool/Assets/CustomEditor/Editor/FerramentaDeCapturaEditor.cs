@@ -8,6 +8,7 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 	public GameObject camera, spawn;
 	public int width, height;
 	int i = 0;
+	float counter = 0;
 	bool showBackgrounds = false, buttonPressed = false;
 	public string nomeDaPasta = "IconesDosItens", prefabsPathName = "";
 	string itemId = "item";
@@ -149,9 +150,12 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 		}
 		else
 		{
-			for(i = 1; i < itemsPrefabs.Length;)
+			counter += Time.deltaTime;
+
+			if(counter >= 1.25f)
 			{
 				SpawnItems();
+				counter = 0;
 			}
 		}
 
@@ -307,7 +311,10 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
     private void GenerateImages()
     {
 		if(camera.GetComponent<ScreenShoot>() != null)
-    		camera.GetComponent<ScreenShoot>().TakeScreenShoot(Camera.main.pixelWidth, Camera.main.pixelHeight, itemId, spawn.transform, nomeDaPasta);
+		{
+			//camera.GetComponent<ScreenShoot>().TakeScreenShoot(Camera.main.pixelWidth, Camera.main.pixelHeight, itemId, spawn.transform, nomeDaPasta);
+			camera.GetComponent<ScreenShoot>().TakeScreenShoot(width, height, Camera.main.pixelWidth, Camera.main.pixelHeight, itemId, spawn.transform, nomeDaPasta);
+		}	
 		else
 		{
 			Debug.Log("No ScreenShoot component!");

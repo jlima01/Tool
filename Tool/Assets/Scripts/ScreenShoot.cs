@@ -4,7 +4,7 @@ using UnityEngine;
 using System.IO;
 public class ScreenShoot : MonoBehaviour
 {
-    int width, height, clipX, clipY;
+    int width, height, clipX, clipY, cameraWidth, cameraHeight;
 	string folderName;
 	public string itemId;
 	private GameObject itemObj;
@@ -13,17 +13,19 @@ public class ScreenShoot : MonoBehaviour
     {
     	yield return new WaitForEndOfFrame();
 
-		if(width > height)
+		if(cameraWidth > cameraHeight)
 		{
-			clipX = width - height;
+			clipX = cameraWidth - cameraHeight;
 		}
-		else if(height > width)
+		else if(cameraHeight > cameraWidth)
 		{
-			clipY = height - width;
+			clipY = cameraHeight - cameraWidth;
 		}
-    	Texture2D texture = new Texture2D(width - clipX, height - clipY, TextureFormat.RGBA32, true); 
+    	//Texture2D texture = new Texture2D(cameraWidth - clipX, cameraHeight - clipY, TextureFormat.RGBA32, true); 
+		Texture2D texture = new Texture2D(width, height, TextureFormat.RGBA32, true); 
 
-    	texture.ReadPixels(new Rect(clipX/2, clipY/2, width - clipX, height - clipY), 0, 0);
+    	texture.ReadPixels(new Rect(clipX/2, clipY/2, cameraWidth - clipX, cameraHeight - clipY), 0, 0);
+		//texture.ReadPixels(new Rect(clipX/2, clipY/2, width, height), 0, 0);
     	texture.Apply();
 
     	byte[] bytes = texture.EncodeToPNG();
@@ -49,10 +51,12 @@ public class ScreenShoot : MonoBehaviour
 		DestroyImmediate(itemObj);
     }
 
-    public void TakeScreenShoot(int w, int h, string i, Transform sp, string name)
+    public void TakeScreenShoot(int w, int h, int camW, int camH, string i, Transform sp, string name)
     {
 		width = w;
 		height = h;
+		cameraWidth = camW;
+		cameraHeight = camH;
 		itemId = i;
 		spawn = sp;
 		folderName = name;

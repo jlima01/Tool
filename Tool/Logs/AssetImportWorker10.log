@@ -15,7 +15,7 @@ C:/Users/jonat/Documents/DevGames/UnityProjects/Tool/Tool
 -logFile
 Logs/AssetImportWorker10.log
 -srvPort
-53928
+53633
 Successfully changed project path to: C:/Users/jonat/Documents/DevGames/UnityProjects/Tool/Tool
 C:/Users/jonat/Documents/DevGames/UnityProjects/Tool/Tool
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/jonat/Documents/DevGames/UnityProjects/Tool/Tool
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 240.83 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 234.54 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.2.6f1 (8c4e826ba445)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.2.6f1/Editor/Data/Resources/UnitySubsystems
@@ -63,51 +63,51 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.2.6f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.2.6f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.2.6f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56344
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56180
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.6f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.6f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.6f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.6f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
-Registered in 0.030751 seconds.
+Registered in 0.052405 seconds.
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 237.22 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 239.12 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.266 seconds
+- Completed reload, in  1.290 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1267ms)
-		BeginReloadAssembly (146ms)
+	ReloadAssembly (1291ms)
+		BeginReloadAssembly (148ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (936ms)
-			LoadAssemblies (142ms)
+		EndReloadAssembly (938ms)
+			LoadAssemblies (143ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (185ms)
+			SetupTypeCache (189ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (45ms)
-			SetupLoadedEditorAssemblies (602ms)
+			SetupLoadedEditorAssemblies (600ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (47ms)
+				InitializePlatformSupportModulesInManaged (49ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (237ms)
+				RefreshPlugins (239ms)
 				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (231ms)
-				ProcessInitializeOnLoadMethodAttributes (84ms)
+				ProcessInitializeOnLoadAttributes (227ms)
+				ProcessInitializeOnLoadMethodAttributes (82ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.020527 seconds.
+Registered in 0.020273 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\jonat\Documents\DevGames\UnityProjects\Tool\Tool\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\jonat\Documents\DevGames\UnityProjects\Tool\Tool\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
@@ -115,46 +115,46 @@ Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 249.29 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 243.67 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.741 seconds
+- Completed reload, in  3.650 seconds
 Domain Reload Profiling:
-	ReloadAssembly (3742ms)
-		BeginReloadAssembly (217ms)
+	ReloadAssembly (3652ms)
+		BeginReloadAssembly (216ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (11ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (30ms)
-		EndReloadAssembly (3322ms)
-			LoadAssemblies (182ms)
+		EndReloadAssembly (3237ms)
+			LoadAssemblies (179ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (542ms)
+			SetupTypeCache (522ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (146ms)
-			SetupLoadedEditorAssemblies (2382ms)
+			RebuildScriptCaches (142ms)
+			SetupLoadedEditorAssemblies (2324ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (41ms)
+				InitializePlatformSupportModulesInManaged (38ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (249ms)
-				BeforeProcessingInitializeOnLoad (236ms)
-				ProcessInitializeOnLoadAttributes (1534ms)
-				ProcessInitializeOnLoadMethodAttributes (297ms)
+				RefreshPlugins (244ms)
+				BeforeProcessingInitializeOnLoad (234ms)
+				ProcessInitializeOnLoadAttributes (1493ms)
+				ProcessInitializeOnLoadMethodAttributes (292ms)
 				AfterProcessingInitializeOnLoad (23ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (11ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 1.36 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.49 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 5958 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 52 unused Assets / (3.8 MB). Loaded Objects now: 6406.
-Memory consumption went from 272.0 MB to 268.3 MB.
-Total: 7.563500 ms (FindLiveObjects: 0.884400 ms CreateObjectMapping: 0.191100 ms MarkObjects: 5.595800 ms  DeleteObjects: 0.890600 ms)
+Memory consumption went from 272.0 MB to 268.2 MB.
+Total: 10.542400 ms (FindLiveObjects: 0.759900 ms CreateObjectMapping: 0.278400 ms MarkObjects: 8.342800 ms  DeleteObjects: 1.159300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -167,51 +167,9 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
-Received Import Request.
-  Time since last request: 77529.298407 seconds.
-  path: Assets/IconesTOS/Bidenhander.png
-  artifactKey: Guid(e96db9313bbe1c7408bb1f651cb04bc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IconesTOS/Bidenhander.png using Guid(e96db9313bbe1c7408bb1f651cb04bc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb305059638e6c1c87f1dee1f74105e6') in 0.207039 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000053 seconds.
-  path: Assets/IconesTOS/Orc Bow.png
-  artifactKey: Guid(90e4a029369a6234d832b64edde2c480) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IconesTOS/Orc Bow.png using Guid(90e4a029369a6234d832b64edde2c480) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6dc07c3935d74f182e4a479975142cb') in 0.016037 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000059 seconds.
-  path: Assets/IconesTOS/Bow1.png
-  artifactKey: Guid(3f80bfc8de8cd3846b9de0b140726cdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IconesTOS/Bow1.png using Guid(3f80bfc8de8cd3846b9de0b140726cdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17cbe1f5109801e7e671402cd19ff8ce') in 0.016246 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000102 seconds.
-  path: Assets/IconesTOS/Human Slayer.png
-  artifactKey: Guid(478a54bd5cc03dd4d9c754292812be60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IconesTOS/Human Slayer.png using Guid(478a54bd5cc03dd4d9c754292812be60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac21940678fd0888dc9758482132820c') in 0.016832 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000053 seconds.
-  path: Assets/IconesTOS/Skinning Dagger.png
-  artifactKey: Guid(b71eee16eb17cbc42b8039c58a9d5f62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IconesTOS/Skinning Dagger.png using Guid(b71eee16eb17cbc42b8039c58a9d5f62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc1633dc64d3fa94514a385c48bf1b3c') in 0.017926 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000051 seconds.
-  path: Assets/IconesTOS/Demonic Flamberge.png
-  artifactKey: Guid(5afd6855cb1a97e4096ff0fd74aae59a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IconesTOS/Demonic Flamberge.png using Guid(5afd6855cb1a97e4096ff0fd74aae59a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20c476fe0cf7d12cf023acb6bdaa1206') in 0.017212 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000065 seconds.
-  path: Assets/IconesTOS/Short Bow.png
-  artifactKey: Guid(10d28fedceb98064f801e38365d476c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IconesTOS/Short Bow.png using Guid(10d28fedceb98064f801e38365d476c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '806a274d70a8d64289ba47cf6e22a08d') in 0.019192 seconds 
-========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.023179 seconds.
+Registered in 0.022434 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\jonat\Documents\DevGames\UnityProjects\Tool\Tool\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\jonat\Documents\DevGames\UnityProjects\Tool\Tool\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
@@ -219,43 +177,43 @@ Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 3.46 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.46 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.811 seconds
+- Completed reload, in  2.486 seconds
 Domain Reload Profiling:
-	ReloadAssembly (3812ms)
-		BeginReloadAssembly (286ms)
+	ReloadAssembly (2487ms)
+		BeginReloadAssembly (280ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (12ms)
+			DisableScriptedObjects (11ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (81ms)
-		EndReloadAssembly (3324ms)
-			LoadAssemblies (195ms)
+			CreateAndSetChildDomain (67ms)
+		EndReloadAssembly (1997ms)
+			LoadAssemblies (183ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (873ms)
-			ReleaseScriptCaches (6ms)
-			RebuildScriptCaches (199ms)
-			SetupLoadedEditorAssemblies (1690ms)
+			SetupTypeCache (548ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (126ms)
+			SetupLoadedEditorAssemblies (984ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (75ms)
-				SetLoadedEditorAssemblies (2ms)
-				RefreshPlugins (4ms)
-				BeforeProcessingInitializeOnLoad (321ms)
-				ProcessInitializeOnLoadAttributes (1176ms)
-				ProcessInitializeOnLoadMethodAttributes (85ms)
-				AfterProcessingInitializeOnLoad (26ms)
+				InitializePlatformSupportModulesInManaged (45ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (184ms)
+				ProcessInitializeOnLoadAttributes (675ms)
+				ProcessInitializeOnLoadMethodAttributes (53ms)
+				AfterProcessingInitializeOnLoad (23ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (51ms)
+			AwakeInstancesAfterBackupRestoration (26ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 3.07 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.91 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5660 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 47 unused Assets / (3.7 MB). Loaded Objects now: 6515.
-Memory consumption went from 268.5 MB to 264.8 MB.
-Total: 9.557400 ms (FindLiveObjects: 1.043400 ms CreateObjectMapping: 0.373600 ms MarkObjects: 6.731100 ms  DeleteObjects: 1.405800 ms)
+Unloading 5653 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 47 unused Assets / (3.7 MB). Loaded Objects now: 6408.
+Memory consumption went from 256.1 MB to 252.3 MB.
+Total: 8.186800 ms (FindLiveObjects: 0.795700 ms CreateObjectMapping: 0.282400 ms MarkObjects: 5.923500 ms  DeleteObjects: 1.183100 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -269,34 +227,76 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 50.795913 seconds.
-  path: Assets/IconesTOS/Blacksmith Hammer.png
-  artifactKey: Guid(4fd0959109b09d44e9e7cc60ee56faa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IconesTOS/Blacksmith Hammer.png using Guid(4fd0959109b09d44e9e7cc60ee56faa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5aca12d83b2563675e2b9f7cd45bac0') in 0.081954 seconds 
+  Time since last request: 82372.863620 seconds.
+  path: Assets/IconesTOS/Bidenhander.png
+  artifactKey: Guid(68cbecd0aa0a0c54a831525eaf632183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Bidenhander.png using Guid(68cbecd0aa0a0c54a831525eaf632183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd4c412213c6a815a6669cc507a955e5') in 0.222432 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000199 seconds.
-  path: Assets/IconesTOS/Crystal Staff.png
-  artifactKey: Guid(210348f79fab7d240bfeab866db4badf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IconesTOS/Crystal Staff.png using Guid(210348f79fab7d240bfeab866db4badf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c1337523f10f63859d2b47405f6e3b8') in 0.026702 seconds 
+  Time since last request: 0.000079 seconds.
+  path: Assets/IconesTOS/Orc Bow.png
+  artifactKey: Guid(50387b8a42c6e10459ed7848a9227d5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Orc Bow.png using Guid(50387b8a42c6e10459ed7848a9227d5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32dc3ae7b4866b96912662034efe3849') in 0.019855 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000075 seconds.
-  path: Assets/IconesTOS/Woodcutter Axe.png
-  artifactKey: Guid(04e17f8e89fcc85459c055a7c6eb60bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IconesTOS/Woodcutter Axe.png using Guid(04e17f8e89fcc85459c055a7c6eb60bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2234015755c7eab714042844f0640fb') in 0.026635 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000063 seconds.
+  Time since last request: 0.000056 seconds.
   path: Assets/IconesTOS/Human Slayer.png
-  artifactKey: Guid(478a54bd5cc03dd4d9c754292812be60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IconesTOS/Human Slayer.png using Guid(478a54bd5cc03dd4d9c754292812be60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af31c1329942334dfe88f49f878560f8') in 0.023703 seconds 
+  artifactKey: Guid(c7538cd6c737d4e4eadba25511c90e03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Human Slayer.png using Guid(c7538cd6c737d4e4eadba25511c90e03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b41c280fe9e570d779267ea009d7710') in 0.018899 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000063 seconds.
+  Time since last request: 0.000062 seconds.
+  path: Assets/IconesTOS/Crystal Staff.png
+  artifactKey: Guid(7d0c9f5a5a4f26c4daafc27e01f134f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Crystal Staff.png using Guid(7d0c9f5a5a4f26c4daafc27e01f134f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ccf013316eb7e5d4c1e054557c91c51') in 0.017827 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/IconesTOS/Great Sword.png
+  artifactKey: Guid(1b9b5e7fe6e2c8541aebdd7f0c9e9770) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Great Sword.png using Guid(1b9b5e7fe6e2c8541aebdd7f0c9e9770) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e6d7811b7be3207a75f33939063633a') in 0.019527 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/IconesTOS/Woodcutter Axe.png
+  artifactKey: Guid(be40a268ea5831e47ac4ac7cf8f27733) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Woodcutter Axe.png using Guid(be40a268ea5831e47ac4ac7cf8f27733) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f92239f38ad8b607ee234e83cdb42c7') in 0.018944 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 54.033427 seconds.
+  path: Assets/IconesTOS/Blacksmith Hammer.png
+  artifactKey: Guid(ca3900d762475ab4bbf5e93b7a4d9859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Blacksmith Hammer.png using Guid(ca3900d762475ab4bbf5e93b7a4d9859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c5b0cda8131624b9760341e5248eca4') in 0.029088 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/IconesTOS/Short Bow.png
+  artifactKey: Guid(1292e19bdd2fe7c4cb5db97902d94e07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Short Bow.png using Guid(1292e19bdd2fe7c4cb5db97902d94e07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a21db32a7d22e6667adca1a51fb9da0a') in 0.031380 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
   path: Assets/IconesTOS/Orc Staff.png
-  artifactKey: Guid(aefbc7e918242cb41b23e12356835d5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IconesTOS/Orc Staff.png using Guid(aefbc7e918242cb41b23e12356835d5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ca66dcc6b26454bce0e2d76b7b36854') in 0.028004 seconds 
+  artifactKey: Guid(0bafd9e1352aba440a23bbf3d258704f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Orc Staff.png using Guid(0bafd9e1352aba440a23bbf3d258704f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '591fa00385565847f8b0775e8dd34818') in 0.017437 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/IconesTOS/Demonic Flamberge.png
+  artifactKey: Guid(523cd5b222153e34d98eb2ba6846d786) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Demonic Flamberge.png using Guid(523cd5b222153e34d98eb2ba6846d786) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6f3440f56d11b4ba089ec312e9b916b') in 0.018011 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000074 seconds.
+  path: Assets/IconesTOS/Crystal Staff.png
+  artifactKey: Guid(7d0c9f5a5a4f26c4daafc27e01f134f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Crystal Staff.png using Guid(7d0c9f5a5a4f26c4daafc27e01f134f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa9924256b43fbeb50472852569a8ade') in 0.017223 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/IconesTOS/Pickaxe.png
+  artifactKey: Guid(c64649305b09fb4408386344696ecd77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Pickaxe.png using Guid(c64649305b09fb4408386344696ecd77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e502790f0f8611593e75fadcacc94d1') in 0.019947 seconds 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting
