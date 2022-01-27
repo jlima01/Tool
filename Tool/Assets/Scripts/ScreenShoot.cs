@@ -21,11 +21,12 @@ public class ScreenShoot : MonoBehaviour
 		{
 			clipY = cameraHeight - cameraWidth;
 		}
-    	//Texture2D texture = new Texture2D(cameraWidth - clipX, cameraHeight - clipY, TextureFormat.RGBA32, true); 
-		Texture2D texture = new Texture2D(width, height, TextureFormat.RGBA32, true); 
+
+    	Texture2D texture = new Texture2D(cameraWidth - clipX, cameraHeight - clipY, TextureFormat.RGBA32, true); 
+		//Texture2D texture = new Texture2D(cameraWidth, cameraHeight, TextureFormat.RGBA32, true); 
 
     	texture.ReadPixels(new Rect(clipX/2, clipY/2, cameraWidth - clipX, cameraHeight - clipY), 0, 0);
-		//texture.ReadPixels(new Rect(clipX/2, clipY/2, width, height), 0, 0);
+		//texture.ReadPixels(new Rect(clipX/2, clipY/2, cameraWidth - clipX, cameraHeight), 0, 0);
     	texture.Apply();
 
     	byte[] bytes = texture.EncodeToPNG();

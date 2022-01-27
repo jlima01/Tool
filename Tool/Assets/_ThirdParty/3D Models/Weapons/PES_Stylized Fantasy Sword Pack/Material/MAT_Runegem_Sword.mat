@@ -125,7 +125,7 @@ Material:
     - _Metallic: 0
     - _Metallic_Remap_Max: 1
     - _Metallic_Remap_Max_1: 1
-    - _Metallic_Remap_Max_2: 1
+    - _Metallic_Remap_Max_2: 0.62
     - _Metallic_Remap_Min: 0.308
     - _Metallic_Remap_Min_1: 0
     - _Metallic_Remap_Min_2: 0
@@ -170,8 +170,8 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - FresnelColor: {r: 1, g: 1, b: 1, a: 0}
-    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor: {r: 0.4339623, g: 0.4339623, b: 0.4339623, a: 1}
+    - _Color: {r: 0.43396226, g: 0.43396226, b: 0.43396226, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _MaskedColor: {r: 1, g: 1, b: 1, a: 1}

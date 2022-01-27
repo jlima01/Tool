@@ -8,11 +8,10 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 	public GameObject camera, spawn;
 	public int width, height;
 	int i = 0;
-	float counter = 0;
-	bool showBackgrounds = false, buttonPressed = false;
+	//float counter = 0;
+	bool showBackgrounds = false;//, buttonPressed = false;
 	public string nomeDaPasta = "IconesDosItens", prefabsPathName = "";
 	string itemId = "item";
-	private bool itemCreated, spawning, OpenedFoldable;
 
 	#endregion
 
@@ -140,7 +139,13 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 			SetPrefabs();
         }
 
-        if(!buttonPressed)
+		if (GUILayout.Button("Gerar Imagens"))
+		{
+			SpawnItems();
+			//buttonPressed = true;
+		}
+
+        /* if(!buttonPressed)
 		{
 			if (GUILayout.Button("Gerar Imagens"))
 			{
@@ -151,13 +156,14 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 		else
 		{
 			counter += Time.deltaTime;
+			Debug.Log(counter);
 
 			if(counter >= 1.25f)
 			{
 				SpawnItems();
 				counter = 0;
 			}
-		}
+		} */
 
         if (GUILayout.Button("Resetar"))
         {
@@ -277,7 +283,6 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 				distance += 0.5f * objectSize;
 				camera.transform.position = mesh.bounds.center - distance * camera.transform.forward;
 				//camera.transform.position = new Vector3(mesh.bounds.center.x, mesh.bounds.center.y, camera.transform.position.z);
-				Debug.Log(Camera.main.fieldOfView);
 			}
 			else if(item.GetComponentInChildren<SkinnedMeshRenderer>() != null)
 			{
@@ -289,17 +294,15 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 				distance += 0.5f * objectSize;
 				camera.transform.position = mesh.bounds.center - distance * camera.transform.forward;
 				//camera.transform.position = new Vector3(mesh.bounds.center.x, mesh.bounds.center.y, camera.transform.position.z);
-				Debug.Log(Camera.main.fieldOfView);
 			}
 			
-
 			GenerateImages();
 
 			i++;
 
 			if(i > itemsPrefabs.Length - 1)
 			{
-				buttonPressed = false;
+				//buttonPressed = false;
 				i = 0;
 			}
 		}
