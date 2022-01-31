@@ -7,13 +7,17 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 	Object[] itemsPrefabs;
 	public GameObject camera, spawn;
 	public int width, height;
+	float mult = 0;
 	int i = 0;
 	//float counter = 0;
 	bool showBackgrounds = false;//, buttonPressed = false;
+	public bool ajusteAutomático = false;
 	public string nomeDaPasta = "IconesDosItens", prefabsPathName = "";
 	string itemId = "item";
 
 	#endregion
+
+	#region  Criação da ferramenta
 
 	[MenuItem("Tools/Ferramenta De Captura Editor")]
 
@@ -29,6 +33,9 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
         DrawVariables();
     }
 
+	#endregion
+
+	#region Desenhar variáveis
     private void DrawVariables()
     {
         #region Variaveis Visíveis
@@ -37,6 +44,7 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 
         camera = EditorGUILayout.ObjectField("Camera De Captura", camera, typeof(GameObject), true) as GameObject;
         spawn = EditorGUILayout.ObjectField("Posição De Captura ", spawn, typeof(GameObject), true) as GameObject;
+		ajusteAutomático = EditorGUILayout.Toggle("Ajuste Automático ", ajusteAutomático);
 
         EditorGUILayout.Space(24);
 
@@ -107,11 +115,6 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
             OnWizardCreate();
         }
 
-		/* if (GUILayout.Button("Deletar Pasta", GUILayout.MaxWidth(90)))
-        {
-            OnWizardErase();
-        } */
-
         EditorGUILayout.EndHorizontal();
 
 		EditorGUILayout.Space(8);
@@ -142,32 +145,16 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 		if (GUILayout.Button("Gerar Imagens"))
 		{
 			SpawnItems();
-			//buttonPressed = true;
 		}
-
-        /* if(!buttonPressed)
-		{
-			if (GUILayout.Button("Gerar Imagens"))
-			{
-				SpawnItems();
-				buttonPressed = true;
-			}
-		}
-		else
-		{
-			counter += Time.deltaTime;
-			Debug.Log(counter);
-
-			if(counter >= 1.25f)
-			{
-				SpawnItems();
-				counter = 0;
-			}
-		} */
 
         if (GUILayout.Button("Resetar"))
         {
             Reset();
+        }
+
+		if (GUILayout.Button("Resetar Contador"))
+        {
+            ResetCounter();
         }
 
         #endregion
@@ -180,7 +167,12 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 
         #endregion
     }
+
+	#endregion
+
     #region Métodos
+
+	#region Preencher os parametros necessários
 	private void SetParameters()
 	{
 		if(GameObject.FindGameObjectWithTag("Spawn") == null)
@@ -204,9 +196,14 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 			camera.AddComponent<ScreenShoot>();
 		}
 		
+		ajusteAutomático = true;
 		width = 1024;
 		height = 1024;
 	}
+
+	#endregion
+
+	#region Pegar os prefabs a serem geradas as imagens
 	private void SetPrefabs()
 	{
 		EditorGUI.indentLevel++;
@@ -229,6 +226,10 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 
 		EditorGUI.indentLevel--;
 	}
+
+	#endregion
+
+	#region Método para criar pasta para salvar imagens
     void OnWizardCreate()
     {
 		if(nomeDaPasta == "" || nomeDaPasta == null)
@@ -241,18 +242,10 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 			string primaryFolder = AssetDatabase.CreateFolder("Assets", nomeDaPasta);
 		}
 	}
-	/* void OnWizardErase()
-    {
-        //Passa longe disso! %$#@ Apagou toda pasta assets do projeto! &%$#@
-		if(Directory.Exists("Assets" + "/" + nomeDaPasta))
-		{
-			bool deleteFolder = AssetDatabase.DeleteAsset("Assets" + "/" + nomeDaPasta);
-		}
-		else
-		{
-			Debug.Log("Directory Not Founded exception!");
-		}
-    } */
+	
+	#endregion
+
+	#region Gerar itens e apagá-los depois dos prints
 	private void SpawnItems()
 	{
 		if(itemsPrefabs == null)
@@ -271,29 +264,93 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 			itemId = itemsPrefabs[counter].name;
 
 			GameObject item = itemsPrefabs[counter] as GameObject;
-			float cameraDistance = 2.0f;
+
+			Transform itemOb = spawn.transform.GetChild(0);
+
+			Camera.main.transform.position = new Vector3(0, 0, -3);
+			
 
 			if(item.GetComponentInChildren<MeshFilter>() != null)
 			{
 				Mesh mesh = item.GetComponentInChildren<MeshFilter>().sharedMesh;
+				
+				Vector3 posStart = Camera.main.WorldToScreenPoint(new Vector3(mesh.bounds.min.x, mesh.bounds.min.y, mesh.bounds.min.z));
+				Vector3 posEnd = Camera.main.WorldToScreenPoint(new Vector3(mesh.bounds.max.x, mesh.bounds.max.y, mesh.bounds.min.z));
+
+				float widthObj = (float)(posEnd.x - posStart.x);
+				float heightObj = (float)(posEnd.y - posStart.y);
+				 
+				float cameraDistance = 2.0f; // Constant factor
 				Vector3 objectSizes = mesh.bounds.max - mesh.bounds.min;
 				float objectSize = Mathf.Max(objectSizes.x, objectSizes.y, objectSizes.z);
-				float cameraView = 2.0f * Mathf.Tan(0.5f * Mathf.Deg2Rad * Camera.main.fieldOfView);
-				float distance = cameraDistance * objectSize / cameraView;
-				distance += 0.5f * objectSize;
-				camera.transform.position = mesh.bounds.center - distance * camera.transform.forward;
-				//camera.transform.position = new Vector3(mesh.bounds.center.x, mesh.bounds.center.y, camera.transform.position.z);
+				float cameraView = 2.0f * Mathf.Tan(0.5f * Mathf.Deg2Rad * Camera.main.fieldOfView); // Visible height 1 meter in front
+				float distance = cameraDistance * objectSize / cameraView; // Combined wanted distance from the object
+				distance += 0.5f * objectSize; // Estimated offset from the center to the outside of the object
+				//Camera.main.transform.position = mesh.bounds.center - distance * camera.transform.forward;
+
+				//Verificar para quando os dois components estão maiores(Talvez criar um método recursivo!).
+
+				if(widthObj > width)
+				{
+					mult = width * 1/widthObj;
+				}
+				
+				if(heightObj > height)
+				{
+					mult = height * 1/heightObj;
+				}
+
+				if((widthObj <= width) && (heightObj <= height))
+				{
+					mult = 1;
+				}
+
+				itemOb.transform.localScale = Vector3.one * mult;
+
+				//Camera.main.transform.position = new Vector3(posCenter.x, posCenter.y, -3);
+				
 			}
 			else if(item.GetComponentInChildren<SkinnedMeshRenderer>() != null)
 			{
 				Mesh mesh = item.GetComponentInChildren<SkinnedMeshRenderer>().sharedMesh;
+				
+				Vector3 posStart = Camera.main.WorldToScreenPoint(new Vector3(mesh.bounds.min.x, mesh.bounds.min.y, mesh.bounds.min.z));
+				Vector3 posEnd = Camera.main.WorldToScreenPoint(new Vector3(mesh.bounds.max.x, mesh.bounds.max.y, mesh.bounds.min.z));
+				
+
+				float widthObj = (float)(posEnd.x - posStart.x);
+				float heightObj = (float)(posEnd.y - posStart.y);
+
+				float cameraDistance = 2.0f; // Constant factor
 				Vector3 objectSizes = mesh.bounds.max - mesh.bounds.min;
 				float objectSize = Mathf.Max(objectSizes.x, objectSizes.y, objectSizes.z);
-				float cameraView = 2.0f * Mathf.Tan(0.5f * Mathf.Deg2Rad * Camera.main.fieldOfView);
-				float distance = cameraDistance * objectSize / cameraView;
-				distance += 0.5f * objectSize;
-				camera.transform.position = mesh.bounds.center - distance * camera.transform.forward;
-				//camera.transform.position = new Vector3(mesh.bounds.center.x, mesh.bounds.center.y, camera.transform.position.z);
+				float cameraView = 2.0f * Mathf.Tan(0.5f * Mathf.Deg2Rad * Camera.main.fieldOfView); // Visible height 1 meter in front
+				float distance = cameraDistance * objectSize / cameraView; // Combined wanted distance from the object
+				distance += 0.5f * objectSize; // Estimated offset from the center to the outside of the object
+				//Camera.main.transform.position = mesh.bounds.center - distance * camera.transform.forward;
+
+				//Verificar para quando os dois components estão maiores(Talvez criar um método recursivo!).
+
+				if(widthObj > width)
+				{
+					mult = width * 1/widthObj;
+				}
+				
+				if(heightObj > height)
+				{
+					mult = height * 1/heightObj;
+				}
+
+				if((widthObj <= width) && (heightObj <= height))
+				{
+					mult = 1;
+				}
+				
+				itemOb.transform.localScale = Vector3.one * mult;
+
+				//Camera.main.transform.position = new Vector3(posCenter.x, posCenter.y, -3);
+
+				Debug.Log("Width1: " + widthObj + "Height: " + heightObj + "Mult: " + mult);
 			}
 			
 			GenerateImages();
@@ -311,6 +368,10 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 			Debug.Log("No items or spawn to generate items!");
 		}
 	}
+
+	#endregion
+
+	#region  Gerar e salvar imagens em PNG
     private void GenerateImages()
     {
 		if(camera.GetComponent<ScreenShoot>() != null)
@@ -323,6 +384,10 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 			Debug.Log("No ScreenShoot component!");
 		}
     }
+
+	#endregion
+
+	#region Resetar parâmetros
 	private void Reset()
 	{
 		width = 0;
@@ -330,6 +395,7 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 		i = 0;
 		camera = null;
 		spawn = null;
+		ajusteAutomático = false;
 		
 		if(GameObject.FindGameObjectWithTag("Spawn") != null)
 		{
@@ -339,6 +405,12 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 		nomeDaPasta = "";
 		prefabsPathName = "";
 	}
+	private void ResetCounter()
+	{
+		i = 0;
+	}
+
+	#endregion
 	
 	#endregion
 }

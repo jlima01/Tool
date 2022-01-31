@@ -22,11 +22,21 @@ public class ScreenShoot : MonoBehaviour
 			clipY = cameraHeight - cameraWidth;
 		}
 
-    	Texture2D texture = new Texture2D(cameraWidth - clipX, cameraHeight - clipY, TextureFormat.RGBA32, true); 
-		//Texture2D texture = new Texture2D(cameraWidth, cameraHeight, TextureFormat.RGBA32, true); 
+    	//Texture2D texture = new Texture2D(cameraWidth - clipX, cameraHeight - clipY, TextureFormat.RGBA32, true); 
+		Texture2D texture = new Texture2D(width, height, TextureFormat.RGBA32, true); 
+		
+		for (int y = 0; y < texture.height; y++) {
+             for (int x = 0; x < texture.width; x++) {
+ 
+                 texture.SetPixel(x, y, Color.clear);
+ 
+             }
+         }
+ 
+        texture.Apply();
 
-    	texture.ReadPixels(new Rect(clipX/2, clipY/2, cameraWidth - clipX, cameraHeight - clipY), 0, 0);
-		//texture.ReadPixels(new Rect(clipX/2, clipY/2, cameraWidth - clipX, cameraHeight), 0, 0);
+    	//texture.ReadPixels(new Rect(clipX/2, clipY/2, cameraWidth - clipX, cameraHeight - clipY), 0, 0);
+		texture.ReadPixels(new Rect((cameraWidth - width)/2, (cameraHeight - height)/2, cameraWidth - clipX, cameraHeight - clipY), 0, 0);
     	texture.Apply();
 
     	byte[] bytes = texture.EncodeToPNG();
@@ -62,5 +72,7 @@ public class ScreenShoot : MonoBehaviour
 		spawn = sp;
 		folderName = name;
     	StartCoroutine("CreatePicture");
+
+		//Debug.Log(transform.position);
     }
 }
