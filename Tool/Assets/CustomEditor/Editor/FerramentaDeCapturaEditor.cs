@@ -14,6 +14,7 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 	public bool ajusteAutomático = false;
 	public string nomeDaPasta = "IconesDosItens", prefabsPathName = "";
 	string itemId = "item";
+	Vector3 centerPos;
 
 	#endregion
 
@@ -267,23 +268,36 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 
 			Transform itemOb = spawn.transform.GetChild(0);
 
-			//float cameraDistance = 2.0f;
-
 			Camera.main.transform.position = new Vector3(0, 0, -3);
 
 			if(item.GetComponentInChildren<MeshFilter>() != null)
 			{
 				Mesh mesh = item.GetComponentInChildren<MeshFilter>().sharedMesh;
 				
-				Vector3 posStart = Camera.main.WorldToScreenPoint(new Vector3(mesh.bounds.min.x, mesh.bounds.min.y, mesh.bounds.min.z));
-				Vector3 posEnd = Camera.main.WorldToScreenPoint(new Vector3(mesh.bounds.max.x, mesh.bounds.max.y, mesh.bounds.min.z));
-				
-				//Vector3 posCenter = new Vector3 ((mesh.bounds.min.x - mesh.bounds.max.x)/2, (mesh.bounds.min.y - mesh.bounds.max.y)/2, -3); 
+				Vector3 posStart1 = Camera.main.WorldToScreenPoint(new Vector3(mesh.bounds.min.x, mesh.bounds.min.y, mesh.bounds.min.z));
+				Vector3 posEnd1 = Camera.main.WorldToScreenPoint(new Vector3(mesh.bounds.max.x, mesh.bounds.max.y, mesh.bounds.min.z));
+				Vector3 posStart2 = Camera.main.WorldToScreenPoint(new Vector3(mesh.bounds.min.x, mesh.bounds.min.z, mesh.bounds.min.y));
+				Vector3 posEnd2 = Camera.main.WorldToScreenPoint(new Vector3(mesh.bounds.max.x, mesh.bounds.max.z, mesh.bounds.min.y));
 
-				float widthObj = (float)(posEnd.x - posStart.x);
-				float heightObj = (float)(posEnd.y - posStart.y);
+				centerPos = mesh.bounds.center;
 
-				//Verificar para quando os dois components estão maiores(Talvez criar um método recursivo!).
+				float widthObj = 0;
+				float heightObj = 0;
+				float widthObj1 = (float)(posEnd1.x - posStart1.x);
+				float heightObj1 = (float)(posEnd1.y - posStart1.y);
+				float widthObj2 = (float)(posEnd2.x - posStart2.x);
+				float heightObj2 = (float)(posEnd2.y - posStart2.y);
+
+				if(heightObj1 > heightObj2)
+				{
+					heightObj = heightObj1;
+					widthObj = widthObj1;
+				}
+				else
+				{
+					heightObj = heightObj2;
+					widthObj = widthObj2;
+				}
 
 				if(widthObj > width)
 				{
@@ -300,22 +314,38 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 					mult = 1;
 				}
 
-				itemOb.transform.localScale = Vector3.one * mult;
+				itemOb.transform.localScale *= mult;
 
-				//Camera.main.transform.position = posCenter;
+				Debug.Log("Width1: " + widthObj + "Height: " + heightObj + "Mult: " + mult);
 			}
 			else if(item.GetComponentInChildren<SkinnedMeshRenderer>() != null)
 			{
 				Mesh mesh = item.GetComponentInChildren<SkinnedMeshRenderer>().sharedMesh;
 				
-				Vector3 posStart = Camera.main.WorldToScreenPoint(new Vector3(mesh.bounds.min.x, mesh.bounds.min.y, mesh.bounds.min.z));
-				Vector3 posEnd = Camera.main.WorldToScreenPoint(new Vector3(mesh.bounds.max.x, mesh.bounds.max.y, mesh.bounds.min.z));
-				//Vector3 posCenter = new Vector3 ((mesh.bounds.min.x - mesh.bounds.max.x)/2, (mesh.bounds.min.y - mesh.bounds.max.y)/2, -3); 
+				Vector3 posStart1 = Camera.main.WorldToScreenPoint(new Vector3(mesh.bounds.min.x, mesh.bounds.min.y, mesh.bounds.min.z));
+				Vector3 posEnd1 = Camera.main.WorldToScreenPoint(new Vector3(mesh.bounds.max.x, mesh.bounds.max.y, mesh.bounds.min.z));
+				Vector3 posStart2 = Camera.main.WorldToScreenPoint(new Vector3(mesh.bounds.min.x, mesh.bounds.min.z, mesh.bounds.min.y));
+				Vector3 posEnd2 = Camera.main.WorldToScreenPoint(new Vector3(mesh.bounds.max.x, mesh.bounds.max.z, mesh.bounds.min.y));
+				
+				centerPos = mesh.bounds.center;
 
-				float widthObj = (float)(posEnd.x - posStart.x);
-				float heightObj = (float)(posEnd.y - posStart.y);
+				float widthObj = 0;
+				float heightObj = 0;
+				float widthObj1 = (float)(posEnd1.x - posStart1.x);
+				float heightObj1 = (float)(posEnd1.y - posStart1.y);
+				float widthObj2 = (float)(posEnd2.x - posStart2.x);
+				float heightObj2 = (float)(posEnd2.y - posStart2.y);
 
-				//Verificar para quando os dois components estão maiores(Talvez criar um método recursivo!).
+				if(heightObj1 > heightObj2)
+				{
+					heightObj = heightObj1;
+					widthObj = widthObj1;
+				}
+				else
+				{
+					heightObj = heightObj2;
+					widthObj = widthObj2;
+				}
 
 				if(widthObj > width)
 				{
@@ -331,13 +361,18 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 				{
 					mult = 1;
 				}
+
+				if((widthObj <= width) && (heightObj <= height))
+				{
+					mult = 1;
+				}
 				
-				itemOb.transform.localScale = Vector3.one * mult;
+				itemOb.transform.localScale *= mult;
 
-				//Camera.main.transform.position = posCenter;
-
-				Debug.Log("Width1: " + widthObj + "Height: " + heightObj + "Mult: " + mult);
+				Debug.Log("Width2: " + widthObj + "Height: " + heightObj + "Mult: " + mult);
 			}
+
+			Camera.main.transform.position = new Vector3 (centerPos.x, centerPos.y, -3);
 			
 			GenerateImages();
 

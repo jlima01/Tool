@@ -15,7 +15,7 @@ C:/Users/jonat/Documents/DevGames/UnityProjects/Tool/Tool
 -logFile
 Logs/AssetImportWorker6.log
 -srvPort
-50912
+53423
 Successfully changed project path to: C:/Users/jonat/Documents/DevGames/UnityProjects/Tool/Tool
 C:/Users/jonat/Documents/DevGames/UnityProjects/Tool/Tool
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/jonat/Documents/DevGames/UnityProjects/Tool/Tool
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 235.21 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 244.44 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.2.6f1 (8c4e826ba445)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.2.6f1/Editor/Data/Resources/UnitySubsystems
@@ -63,51 +63,51 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.2.6f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.2.6f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.2.6f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56724
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56416
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.6f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.6f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.6f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.6f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
-Registered in 0.028910 seconds.
+Registered in 0.026915 seconds.
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 234.80 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 243.03 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.286 seconds
+- Completed reload, in  1.267 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1287ms)
-		BeginReloadAssembly (159ms)
+	ReloadAssembly (1268ms)
+		BeginReloadAssembly (155ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (945ms)
-			LoadAssemblies (154ms)
+		EndReloadAssembly (935ms)
+			LoadAssemblies (149ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (188ms)
+			SetupTypeCache (185ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (45ms)
-			SetupLoadedEditorAssemblies (607ms)
+			SetupLoadedEditorAssemblies (600ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (47ms)
+				InitializePlatformSupportModulesInManaged (46ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (235ms)
+				RefreshPlugins (243ms)
 				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (229ms)
-				ProcessInitializeOnLoadMethodAttributes (93ms)
+				ProcessInitializeOnLoadAttributes (227ms)
+				ProcessInitializeOnLoadMethodAttributes (81ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.021410 seconds.
+Registered in 0.020628 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\jonat\Documents\DevGames\UnityProjects\Tool\Tool\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\jonat\Documents\DevGames\UnityProjects\Tool\Tool\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
@@ -115,46 +115,46 @@ Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 244.73 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 253.25 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  6.790 seconds
+- Completed reload, in 14.329 seconds
 Domain Reload Profiling:
-	ReloadAssembly (6792ms)
-		BeginReloadAssembly (236ms)
+	ReloadAssembly (14330ms)
+		BeginReloadAssembly (216ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (11ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (31ms)
-		EndReloadAssembly (6349ms)
-			LoadAssemblies (197ms)
+			CreateAndSetChildDomain (30ms)
+		EndReloadAssembly (13912ms)
+			LoadAssemblies (181ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (540ms)
+			SetupTypeCache (541ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (146ms)
-			SetupLoadedEditorAssemblies (5407ms)
+			RebuildScriptCaches (141ms)
+			SetupLoadedEditorAssemblies (12976ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (42ms)
+				InitializePlatformSupportModulesInManaged (40ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (245ms)
-				BeforeProcessingInitializeOnLoad (233ms)
-				ProcessInitializeOnLoadAttributes (1832ms)
-				ProcessInitializeOnLoadMethodAttributes (3032ms)
-				AfterProcessingInitializeOnLoad (23ms)
+				RefreshPlugins (253ms)
+				BeforeProcessingInitializeOnLoad (237ms)
+				ProcessInitializeOnLoadAttributes (12120ms)
+				ProcessInitializeOnLoadMethodAttributes (303ms)
+				AfterProcessingInitializeOnLoad (22ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (11ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.29 seconds
-Refreshing native plugins compatible for Editor in 1.44 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.11 seconds
+Refreshing native plugins compatible for Editor in 1.43 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 5958 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 52 unused Assets / (3.8 MB). Loaded Objects now: 6406.
-Memory consumption went from 272.2 MB to 268.5 MB.
-Total: 7.889400 ms (FindLiveObjects: 0.784800 ms CreateObjectMapping: 0.277200 ms MarkObjects: 5.725200 ms  DeleteObjects: 1.100400 ms)
+Memory consumption went from 272.2 MB to 268.4 MB.
+Total: 8.013200 ms (FindLiveObjects: 0.756400 ms CreateObjectMapping: 0.279200 ms MarkObjects: 5.828000 ms  DeleteObjects: 1.147800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -168,142 +168,1000 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 26320.234259 seconds.
-  path: Assets/IconesTOS/Composed Bow.png
-  artifactKey: Guid(c1731320f644f54458ee17ae8015d1d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IconesTOS/Composed Bow.png using Guid(c1731320f644f54458ee17ae8015d1d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04a69ca9261513aaebb5aace52963585') in 0.227349 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 103.963881 seconds.
-  path: Assets/IconesTOS/Bow1.png
-  artifactKey: Guid(97d5ce723c700c343805cd000c166335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IconesTOS/Bow1.png using Guid(97d5ce723c700c343805cd000c166335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6bf6f1ffebe18de247a8058f528a91ac') in 0.023474 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 55.156121 seconds.
-  path: Assets/IconesTOS/Bow1.png
-  artifactKey: Guid(97d5ce723c700c343805cd000c166335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IconesTOS/Bow1.png using Guid(97d5ce723c700c343805cd000c166335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa1bca7c868a8ac84a8df66caaa54b8c') in 0.024695 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 34.240457 seconds.
-  path: Assets/IconesTOS/Bow1.png
-  artifactKey: Guid(97d5ce723c700c343805cd000c166335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IconesTOS/Bow1.png using Guid(97d5ce723c700c343805cd000c166335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7020b5b881c8177fb0d040b2bcdfb43') in 0.553210 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 34.524659 seconds.
-  path: Assets/IconesTOS/Bow1.png
-  artifactKey: Guid(97d5ce723c700c343805cd000c166335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IconesTOS/Bow1.png using Guid(97d5ce723c700c343805cd000c166335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69f5a4a3f4450de6d832fd78dfcf783e') in 0.069267 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 41.766319 seconds.
-  path: Assets/IconesTOS/Bow1.png
-  artifactKey: Guid(97d5ce723c700c343805cd000c166335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IconesTOS/Bow1.png using Guid(97d5ce723c700c343805cd000c166335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad8218dad34d5fa1e8d180d13a601228') in 0.017561 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
+  Time since last request: 15439.280845 seconds.
   path: Assets/IconesTOS/Escudo.png
   artifactKey: Guid(146d7af0e2291dd46b86970892fb3e29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IconesTOS/Escudo.png using Guid(146d7af0e2291dd46b86970892fb3e29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1714248c4fa3ab0bdd27629bea7afe09') in 0.020093 seconds 
+Start importing Assets/IconesTOS/Escudo.png using Guid(146d7af0e2291dd46b86970892fb3e29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d047d31e7ffa6609be7e814181a05b9') in 0.162667 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 37.405407 seconds.
-  path: Assets/IconesTOS/Orc Bow.png
-  artifactKey: Guid(50387b8a42c6e10459ed7848a9227d5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IconesTOS/Orc Bow.png using Guid(50387b8a42c6e10459ed7848a9227d5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e024a970d71737ed86fafa463121b58') in 0.018152 seconds 
+  Time since last request: 24.656066 seconds.
+  path: Assets/_ToS/Resources/Items/Armor/Escudo.prefab
+  artifactKey: Guid(ec3f39ed920f2c341aa3235b792362b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Armor/Escudo.prefab using Guid(ec3f39ed920f2c341aa3235b792362b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb842154433aaa7049887a447f8b7924') in 3.236671 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 31.657335 seconds.
-  path: Assets/IconesTOS/Bidenhander.png
-  artifactKey: Guid(68cbecd0aa0a0c54a831525eaf632183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IconesTOS/Bidenhander.png using Guid(68cbecd0aa0a0c54a831525eaf632183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bf221429bc7895d2804be1e9081d2f3') in 0.020688 seconds 
+  Time since last request: 3.045918 seconds.
+  path: Assets/_ToS/Resources/Items/Armor/Escudo 1.prefab
+  artifactKey: Guid(1db057ee0f06fcf41a9c73fab4febf65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Armor/Escudo 1.prefab using Guid(1db057ee0f06fcf41a9c73fab4febf65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4fdd2ae6c84a84dfe4b375cabfb7004') in 0.029602 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000038 seconds.
-  path: Assets/IconesTOS/Bow1.png
-  artifactKey: Guid(97d5ce723c700c343805cd000c166335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IconesTOS/Bow1.png using Guid(97d5ce723c700c343805cd000c166335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88c6b529816db31a9100db7712fc3f0f') in 0.027183 seconds 
+  Time since last request: 171.404633 seconds.
+  path: Assets/IconesTOS/Escudo 1.png
+  artifactKey: Guid(dd1cf63403b51944f99906cd0da0c1e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Escudo 1.png using Guid(dd1cf63403b51944f99906cd0da0c1e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aad6dbcb9089773e4b674b0d2a658547') in 0.032392 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000056 seconds.
-  path: Assets/IconesTOS/Orc Bow.png
-  artifactKey: Guid(50387b8a42c6e10459ed7848a9227d5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IconesTOS/Orc Bow.png using Guid(50387b8a42c6e10459ed7848a9227d5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2c02d49c6a13ce8eb6e5bd206a390b8') in 0.025157 seconds 
+  Time since last request: 14.217304 seconds.
+  path: Assets/IconesTOS/Escudo 1.png
+  artifactKey: Guid(dd1cf63403b51944f99906cd0da0c1e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Escudo 1.png using Guid(dd1cf63403b51944f99906cd0da0c1e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '458238773eb7352131c3939b096416e2') in 0.057374 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.022069 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\jonat\Documents\DevGames\UnityProjects\Tool\Tool\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\jonat\Documents\DevGames\UnityProjects\Tool\Tool\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.40 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.590 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2591ms)
+		BeginReloadAssembly (398ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (60ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (115ms)
+		EndReloadAssembly (1989ms)
+			LoadAssemblies (174ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (499ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (114ms)
+			SetupLoadedEditorAssemblies (975ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (40ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (179ms)
+				ProcessInitializeOnLoadAttributes (676ms)
+				ProcessInitializeOnLoadMethodAttributes (53ms)
+				AfterProcessingInitializeOnLoad (24ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (38ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.56 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5655 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 47 unused Assets / (3.7 MB). Loaded Objects now: 6569.
+Memory consumption went from 267.1 MB to 263.4 MB.
+Total: 10.398700 ms (FindLiveObjects: 1.140100 ms CreateObjectMapping: 0.342400 ms MarkObjects: 7.663400 ms  DeleteObjects: 1.249900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000046 seconds.
-  path: Assets/IconesTOS/Human Slayer.png
-  artifactKey: Guid(c7538cd6c737d4e4eadba25511c90e03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IconesTOS/Human Slayer.png using Guid(c7538cd6c737d4e4eadba25511c90e03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd89168d4fe0fbb4ccb123d2564870825') in 0.049789 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/IconesTOS/Demonic Flamberge.png
-  artifactKey: Guid(523cd5b222153e34d98eb2ba6846d786) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IconesTOS/Demonic Flamberge.png using Guid(523cd5b222153e34d98eb2ba6846d786) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86991ffa5fb70363ba72bb0c6a31a640') in 0.022460 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000095 seconds.
-  path: Assets/IconesTOS/Crystal Staff.png
-  artifactKey: Guid(7d0c9f5a5a4f26c4daafc27e01f134f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IconesTOS/Crystal Staff.png using Guid(7d0c9f5a5a4f26c4daafc27e01f134f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0489eb06b51fc5bd466e2d6658180e8') in 0.017404 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/IconesTOS/Great Sword.png
-  artifactKey: Guid(1b9b5e7fe6e2c8541aebdd7f0c9e9770) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IconesTOS/Great Sword.png using Guid(1b9b5e7fe6e2c8541aebdd7f0c9e9770) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c3e615331098f1ecf84cc908480ea24') in 0.017267 seconds 
+  Time since last request: 89.024145 seconds.
+  path: Assets/IconesTOS/Short Bow.png
+  artifactKey: Guid(1292e19bdd2fe7c4cb5db97902d94e07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Short Bow.png using Guid(1292e19bdd2fe7c4cb5db97902d94e07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93d9863c4df8894b1074e0041f138579') in 0.070016 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000039 seconds.
-  path: Assets/IconesTOS/Woodcutter Axe.png
-  artifactKey: Guid(be40a268ea5831e47ac4ac7cf8f27733) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IconesTOS/Woodcutter Axe.png using Guid(be40a268ea5831e47ac4ac7cf8f27733) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e269a72bcb03f0c0747c215a2e759e9f') in 0.042775 seconds 
+  path: Assets/IconesTOS/Composed Bow.png
+  artifactKey: Guid(c1731320f644f54458ee17ae8015d1d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Composed Bow.png using Guid(c1731320f644f54458ee17ae8015d1d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1d60b1db51222a853c6ccb2f9499780') in 0.016143 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.019263 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\jonat\Documents\DevGames\UnityProjects\Tool\Tool\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\jonat\Documents\DevGames\UnityProjects\Tool\Tool\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.38 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.513 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2514ms)
+		BeginReloadAssembly (294ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (12ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (1ms)
+			CreateAndSetChildDomain (75ms)
+		EndReloadAssembly (2011ms)
+			LoadAssemblies (182ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (498ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (111ms)
+			SetupLoadedEditorAssemblies (957ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (40ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (178ms)
+				ProcessInitializeOnLoadAttributes (660ms)
+				ProcessInitializeOnLoadMethodAttributes (52ms)
+				AfterProcessingInitializeOnLoad (24ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (26ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.47 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5668 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 44 unused Assets / (3.4 MB). Loaded Objects now: 6626.
+Memory consumption went from 282.4 MB to 279.0 MB.
+Total: 7.457200 ms (FindLiveObjects: 0.760300 ms CreateObjectMapping: 0.278500 ms MarkObjects: 5.658500 ms  DeleteObjects: 0.758300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.019698 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\jonat\Documents\DevGames\UnityProjects\Tool\Tool\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\jonat\Documents\DevGames\UnityProjects\Tool\Tool\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.46 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.539 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2540ms)
+		BeginReloadAssembly (300ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (15ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (69ms)
+		EndReloadAssembly (2022ms)
+			LoadAssemblies (205ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (497ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (111ms)
+			SetupLoadedEditorAssemblies (981ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (40ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (179ms)
+				ProcessInitializeOnLoadAttributes (683ms)
+				ProcessInitializeOnLoadMethodAttributes (54ms)
+				AfterProcessingInitializeOnLoad (23ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (49ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.75 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5650 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 44 unused Assets / (3.4 MB). Loaded Objects now: 6628.
+Memory consumption went from 281.2 MB to 277.8 MB.
+Total: 7.746900 ms (FindLiveObjects: 0.823100 ms CreateObjectMapping: 0.372100 ms MarkObjects: 5.788800 ms  DeleteObjects: 0.760300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 57.952647 seconds.
+  Time since last request: 247.629961 seconds.
+  path: Assets/IconesTOS/Blacksmith Hammer.png
+  artifactKey: Guid(ca3900d762475ab4bbf5e93b7a4d9859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Blacksmith Hammer.png using Guid(ca3900d762475ab4bbf5e93b7a4d9859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e587398ee040009caf1b6ce6f7db5e31') in 0.101739 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/IconesTOS/Orc Staff.png
+  artifactKey: Guid(0bafd9e1352aba440a23bbf3d258704f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Orc Staff.png using Guid(0bafd9e1352aba440a23bbf3d258704f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54f8671a8b76f9cea905adbbbe1341e1') in 0.041517 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000072 seconds.
+  path: Assets/IconesTOS/Woodcutter Axe.png
+  artifactKey: Guid(be40a268ea5831e47ac4ac7cf8f27733) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Woodcutter Axe.png using Guid(be40a268ea5831e47ac4ac7cf8f27733) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b94c5c5951b560162a819d93929b7652') in 0.076264 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 46.219395 seconds.
   path: Assets/IconesTOS/Bidenhander.png
   artifactKey: Guid(68cbecd0aa0a0c54a831525eaf632183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IconesTOS/Bidenhander.png using Guid(68cbecd0aa0a0c54a831525eaf632183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97aa7237575cbe0cf338cd40bbc74989') in 0.020701 seconds 
+Start importing Assets/IconesTOS/Bidenhander.png using Guid(68cbecd0aa0a0c54a831525eaf632183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06d60fc062716df6e10998b51b3c1835') in 0.033184 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/IconesTOS/Orc Bow.png
+  artifactKey: Guid(50387b8a42c6e10459ed7848a9227d5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Orc Bow.png using Guid(50387b8a42c6e10459ed7848a9227d5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91a786610c2814ccf6cc5b8f5fb5f5f9') in 0.025335 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/IconesTOS/Court Magician Staff.png
+  artifactKey: Guid(061aaa04a99c58146a69d9875c9e98f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Court Magician Staff.png using Guid(061aaa04a99c58146a69d9875c9e98f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a394c4dbc0de176e71c3222b30b3591') in 0.022797 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/IconesTOS/Escudo.png
+  artifactKey: Guid(146d7af0e2291dd46b86970892fb3e29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Escudo.png using Guid(146d7af0e2291dd46b86970892fb3e29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83401e8c37a95e006881c4735b676c72') in 0.019444 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 41.839344 seconds.
+  path: Assets/IconesTOS/Bidenhander.png
+  artifactKey: Guid(68cbecd0aa0a0c54a831525eaf632183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Bidenhander.png using Guid(68cbecd0aa0a0c54a831525eaf632183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c89a12825809577690db7348d63fbdc') in 0.023482 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000040 seconds.
-  path: Assets/IconesTOS/Gardening Sickle.png
-  artifactKey: Guid(15b285a4be29cd64288096f814016ce0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IconesTOS/Gardening Sickle.png using Guid(15b285a4be29cd64288096f814016ce0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07b2bb34c2c022d56d51f68d6c1980ab') in 0.033996 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
   path: Assets/IconesTOS/Orc Bow.png
   artifactKey: Guid(50387b8a42c6e10459ed7848a9227d5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IconesTOS/Orc Bow.png using Guid(50387b8a42c6e10459ed7848a9227d5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b6a103340b00b29355d7cac00f35553') in 0.024377 seconds 
+Start importing Assets/IconesTOS/Orc Bow.png using Guid(50387b8a42c6e10459ed7848a9227d5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86d467370ff2e2623c3e1158130fee07') in 0.017466 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000045 seconds.
-  path: Assets/IconesTOS/Human Slayer.png
-  artifactKey: Guid(c7538cd6c737d4e4eadba25511c90e03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IconesTOS/Human Slayer.png using Guid(c7538cd6c737d4e4eadba25511c90e03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b585c1a00e1bc886f3ae02ccb82fa9f') in 0.030698 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000045 seconds.
+  Time since last request: 0.000058 seconds.
   path: Assets/IconesTOS/Court Magician Staff.png
   artifactKey: Guid(061aaa04a99c58146a69d9875c9e98f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IconesTOS/Court Magician Staff.png using Guid(061aaa04a99c58146a69d9875c9e98f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07df6255e1eff951b267759077c4f9dc') in 0.024273 seconds 
+Start importing Assets/IconesTOS/Court Magician Staff.png using Guid(061aaa04a99c58146a69d9875c9e98f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61620b4849adc55688cc59818dfb88a4') in 0.021380 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000042 seconds.
+  Time since last request: 0.000058 seconds.
+  path: Assets/IconesTOS/Composed Bow.png
+  artifactKey: Guid(c1731320f644f54458ee17ae8015d1d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Composed Bow.png using Guid(c1731320f644f54458ee17ae8015d1d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2693df0dcb495a4892e799251a819273') in 0.023183 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.279440 seconds.
+  path: Assets/IconesTOS/Orc Staff.png
+  artifactKey: Guid(0bafd9e1352aba440a23bbf3d258704f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Orc Staff.png using Guid(0bafd9e1352aba440a23bbf3d258704f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c312b430a579b1d79fc28e91645ab36') in 0.019452 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
   path: Assets/IconesTOS/Skinning Dagger.png
   artifactKey: Guid(2a906ecfb1464df4db16de32e734368d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IconesTOS/Skinning Dagger.png using Guid(2a906ecfb1464df4db16de32e734368d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c5b106f7300d5f2f879ed72f5892e6b') in 0.025447 seconds 
+Start importing Assets/IconesTOS/Skinning Dagger.png using Guid(2a906ecfb1464df4db16de32e734368d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '987ce40ce92f31a585488743d3d9b58d') in 0.031568 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.020692 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\jonat\Documents\DevGames\UnityProjects\Tool\Tool\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\jonat\Documents\DevGames\UnityProjects\Tool\Tool\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.47 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.503 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2505ms)
+		BeginReloadAssembly (279ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (13ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (72ms)
+		EndReloadAssembly (2016ms)
+			LoadAssemblies (184ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (485ms)
+			ReleaseScriptCaches (4ms)
+			RebuildScriptCaches (118ms)
+			SetupLoadedEditorAssemblies (997ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (40ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (183ms)
+				ProcessInitializeOnLoadAttributes (694ms)
+				ProcessInitializeOnLoadMethodAttributes (55ms)
+				AfterProcessingInitializeOnLoad (23ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (42ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.55 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5650 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 44 unused Assets / (3.4 MB). Loaded Objects now: 6813.
+Memory consumption went from 286.4 MB to 283.0 MB.
+Total: 8.401400 ms (FindLiveObjects: 0.867900 ms CreateObjectMapping: 0.296500 ms MarkObjects: 6.187400 ms  DeleteObjects: 1.047000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.019889 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\jonat\Documents\DevGames\UnityProjects\Tool\Tool\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\jonat\Documents\DevGames\UnityProjects\Tool\Tool\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.46 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.515 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2517ms)
+		BeginReloadAssembly (274ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (16ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (71ms)
+		EndReloadAssembly (2033ms)
+			LoadAssemblies (187ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (493ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (112ms)
+			SetupLoadedEditorAssemblies (1003ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (42ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (180ms)
+				ProcessInitializeOnLoadAttributes (700ms)
+				ProcessInitializeOnLoadMethodAttributes (55ms)
+				AfterProcessingInitializeOnLoad (23ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (42ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.52 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5652 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 44 unused Assets / (3.4 MB). Loaded Objects now: 6817.
+Memory consumption went from 287.1 MB to 283.7 MB.
+Total: 7.501000 ms (FindLiveObjects: 0.814500 ms CreateObjectMapping: 0.281200 ms MarkObjects: 5.664700 ms  DeleteObjects: 0.738700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 632.989948 seconds.
+  path: Assets/IconesTOS/Blacksmith Hammer.png
+  artifactKey: Guid(ca3900d762475ab4bbf5e93b7a4d9859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Blacksmith Hammer.png using Guid(ca3900d762475ab4bbf5e93b7a4d9859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ff1c471069d1b0f03f309e12a732d91') in 0.067570 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/IconesTOS/Orc Staff.png
+  artifactKey: Guid(0bafd9e1352aba440a23bbf3d258704f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Orc Staff.png using Guid(0bafd9e1352aba440a23bbf3d258704f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17db2188e064d7dadfc09828f9bbeb5c') in 0.016091 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 25.538638 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Bow/Bow1.prefab
+  artifactKey: Guid(531bcc80eebe59a44b04f10a02c36da7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Bow/Bow1.prefab using Guid(531bcc80eebe59a44b04f10a02c36da7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd562f62f81840d57a70ff4e3ffc2aa85') in 1.407385 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Bow/Short Bow.prefab
+  artifactKey: Guid(10addc2a62e45eb42bc0e3b1d3563bb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Bow/Short Bow.prefab using Guid(10addc2a62e45eb42bc0e3b1d3563bb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c681558ed578f0404af6fabba0a1dac') in 0.037715 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Bow/Bow1.prefab
+  artifactKey: Guid(531bcc80eebe59a44b04f10a02c36da7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Bow/Bow1.prefab using Guid(531bcc80eebe59a44b04f10a02c36da7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c7288e0c526bfc3d469c1b73d9d8101') in 0.037688 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Bow/Composed Bow.prefab
+  artifactKey: Guid(e470a927f524a4042bdbc22c950b781a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Bow/Composed Bow.prefab using Guid(e470a927f524a4042bdbc22c950b781a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '282904dc43f41fff89b4f24b1703e2d7') in 0.055981 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Bow/Orc Bow.prefab
+  artifactKey: Guid(8e576bb137e3a194e8ddb665feac6dce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Bow/Orc Bow.prefab using Guid(8e576bb137e3a194e8ddb665feac6dce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50cc567cb955fcae249c094eb303a6cf') in 0.046771 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.093012 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Bow/Composed Bow.prefab
+  artifactKey: Guid(e470a927f524a4042bdbc22c950b781a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Bow/Composed Bow.prefab using Guid(e470a927f524a4042bdbc22c950b781a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98a9df31fa871b65edc61e78e6a46911') in 0.037248 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.995969 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Bow/Orc Bow.prefab
+  artifactKey: Guid(8e576bb137e3a194e8ddb665feac6dce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Bow/Orc Bow.prefab using Guid(8e576bb137e3a194e8ddb665feac6dce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43ae9c51942ec3168d92db3fd497335a') in 0.070056 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.850267 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Bow/Short Bow.prefab
+  artifactKey: Guid(10addc2a62e45eb42bc0e3b1d3563bb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Bow/Short Bow.prefab using Guid(10addc2a62e45eb42bc0e3b1d3563bb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6a4e5613c7cba783bf46edcbaa46f4a') in 0.036048 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.216843 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Bow/Short Bow.prefab
+  artifactKey: Guid(10addc2a62e45eb42bc0e3b1d3563bb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Bow/Short Bow.prefab using Guid(10addc2a62e45eb42bc0e3b1d3563bb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '881c115fbd65cdf0528fcecf56568c14') in 0.115196 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Bow/Composed Bow.prefab
+  artifactKey: Guid(e470a927f524a4042bdbc22c950b781a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Bow/Composed Bow.prefab using Guid(e470a927f524a4042bdbc22c950b781a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5de06a9d0ef7aa4bfc29f360ebea27ad') in 0.053223 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.523026 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Bow/Short Bow.prefab
+  artifactKey: Guid(10addc2a62e45eb42bc0e3b1d3563bb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Bow/Short Bow.prefab using Guid(10addc2a62e45eb42bc0e3b1d3563bb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a887f316a3bcb7319d8c1978444b6cef') in 0.038006 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.021346 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Bow/Bow1.prefab
+  artifactKey: Guid(531bcc80eebe59a44b04f10a02c36da7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Bow/Bow1.prefab using Guid(531bcc80eebe59a44b04f10a02c36da7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3bd25df3a8a5ab30f4dff16bd3a358b') in 0.043034 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 84.444284 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Bow/Composed Bow.prefab
+  artifactKey: Guid(e470a927f524a4042bdbc22c950b781a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Bow/Composed Bow.prefab using Guid(e470a927f524a4042bdbc22c950b781a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5afe7008cf73e0e3e8f37c40356b08b') in 0.038954 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.045401 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Bow/Orc Bow.prefab
+  artifactKey: Guid(8e576bb137e3a194e8ddb665feac6dce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Bow/Orc Bow.prefab using Guid(8e576bb137e3a194e8ddb665feac6dce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbe89cc2601896944bcfe8c76e6ed96d') in 0.035661 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.978888 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Staff
+  artifactKey: Guid(3bd2cc55060a2cd40b260a794b4eca01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Staff using Guid(3bd2cc55060a2cd40b260a794b4eca01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99add197b658ef78d1a58c644e964cf5') in 0.003819 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.032759 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Staff/Court Magician Staff.prefab
+  artifactKey: Guid(91efcda0c4928704e905fb1f48e9fe89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Staff/Court Magician Staff.prefab using Guid(91efcda0c4928704e905fb1f48e9fe89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '451f58fae1904dbf7197a574fdb430ed') in 0.126489 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Staff/Orc Staff.prefab
+  artifactKey: Guid(f49575f707d300c4787301df4f2c10d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Staff/Orc Staff.prefab using Guid(f49575f707d300c4787301df4f2c10d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5f28f7e6e20ba13d3e08705f6e3c586') in 0.040328 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.463012 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Staff/Court Magician Staff.prefab
+  artifactKey: Guid(91efcda0c4928704e905fb1f48e9fe89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Staff/Court Magician Staff.prefab using Guid(91efcda0c4928704e905fb1f48e9fe89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dabb2cc765d220fe6a7d1d5da69177b7') in 0.037244 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.391878 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Staff/Court Magician Staff.prefab
+  artifactKey: Guid(91efcda0c4928704e905fb1f48e9fe89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Staff/Court Magician Staff.prefab using Guid(91efcda0c4928704e905fb1f48e9fe89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c254145d8ff2c4124dcc74ecdb607c50') in 0.037241 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.785733 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Staff/Court Magician Staff.prefab
+  artifactKey: Guid(91efcda0c4928704e905fb1f48e9fe89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Staff/Court Magician Staff.prefab using Guid(91efcda0c4928704e905fb1f48e9fe89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b466876b37ecbdce7eb710b9bb5b517') in 0.036393 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.108127 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Staff/Crystal Staff.prefab
+  artifactKey: Guid(d7f9e2908f77cfd4f99b90d0627a9afc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Staff/Crystal Staff.prefab using Guid(d7f9e2908f77cfd4f99b90d0627a9afc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1155b88de841144c44738e887f35e06f') in 0.035151 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.405138 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Staff/Crystal Staff.prefab
+  artifactKey: Guid(d7f9e2908f77cfd4f99b90d0627a9afc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Staff/Crystal Staff.prefab using Guid(d7f9e2908f77cfd4f99b90d0627a9afc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd565c5eca8b5ffd6e81b8bf5150f6ab7') in 0.037273 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.791544 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Staff/Crystal Staff.prefab
+  artifactKey: Guid(d7f9e2908f77cfd4f99b90d0627a9afc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Staff/Crystal Staff.prefab using Guid(d7f9e2908f77cfd4f99b90d0627a9afc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43f82cdabc190614abbe51e55bcc4c1b') in 0.036094 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.690157 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Staff/Crystal Staff.prefab
+  artifactKey: Guid(d7f9e2908f77cfd4f99b90d0627a9afc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Staff/Crystal Staff.prefab using Guid(d7f9e2908f77cfd4f99b90d0627a9afc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5c3d1d2eb3056335d217f8099bf6977') in 0.038904 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.120803 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Staff/Orc Staff.prefab
+  artifactKey: Guid(f49575f707d300c4787301df4f2c10d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Staff/Orc Staff.prefab using Guid(f49575f707d300c4787301df4f2c10d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e92f94fe5e6e5ac48bf4c2e994ab85c') in 0.038022 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.571784 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Staff/Orc Staff.prefab
+  artifactKey: Guid(f49575f707d300c4787301df4f2c10d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Staff/Orc Staff.prefab using Guid(f49575f707d300c4787301df4f2c10d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6eecaa7d12a0cb23c7601d553d3ceca2') in 0.038377 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.768634 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Staff/Orc Staff.prefab
+  artifactKey: Guid(f49575f707d300c4787301df4f2c10d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Staff/Orc Staff.prefab using Guid(f49575f707d300c4787301df4f2c10d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a9dae5727d6dff4cd0abd6a512c5d5d') in 0.037075 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.717085 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Staff/Orc Staff.prefab
+  artifactKey: Guid(f49575f707d300c4787301df4f2c10d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Staff/Orc Staff.prefab using Guid(f49575f707d300c4787301df4f2c10d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd12deacd7f5608256f6c32bfad3fb2ef') in 0.038219 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.003482 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Tools
+  artifactKey: Guid(3cc897f88d43a2d448e72709f5c17ffa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Tools using Guid(3cc897f88d43a2d448e72709f5c17ffa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3fb7559fe029ef078ffbc0a18a23908') in 0.004230 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.733031 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Tools/Blacksmith Tools
+  artifactKey: Guid(e91a61e93aa978f47862b1520016daac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Tools/Blacksmith Tools using Guid(e91a61e93aa978f47862b1520016daac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e25b111c778745d9b1fcc5ca03f60727') in 0.004288 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.058773 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Tools/Blacksmith Tools/Blacksmith Hammer.prefab
+  artifactKey: Guid(6d1ecd94dccaa8845a00187d97f33a71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Tools/Blacksmith Tools/Blacksmith Hammer.prefab using Guid(6d1ecd94dccaa8845a00187d97f33a71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '661c7ecf6771a1e5d420e566407ff623') in 0.089506 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.871382 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Tools/Blacksmith Tools/Blacksmith Hammer.prefab
+  artifactKey: Guid(6d1ecd94dccaa8845a00187d97f33a71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Tools/Blacksmith Tools/Blacksmith Hammer.prefab using Guid(6d1ecd94dccaa8845a00187d97f33a71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf2a6221fcb6c580df17be8dd17ef3cb') in 0.054378 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.952489 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Tools/Blacksmith Tools/Blacksmith Hammer.prefab
+  artifactKey: Guid(6d1ecd94dccaa8845a00187d97f33a71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Tools/Blacksmith Tools/Blacksmith Hammer.prefab using Guid(6d1ecd94dccaa8845a00187d97f33a71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66febe3eccbdef0bd289b10e853a8968') in 0.076873 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.536967 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Tools/Blacksmith Tools/Blacksmith Hammer.prefab
+  artifactKey: Guid(6d1ecd94dccaa8845a00187d97f33a71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Tools/Blacksmith Tools/Blacksmith Hammer.prefab using Guid(6d1ecd94dccaa8845a00187d97f33a71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5802ef5ceef68fdc6c76654a0724f703') in 0.039372 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.889791 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Tools/Blacksmith Tools/Blacksmith Hammer.prefab
+  artifactKey: Guid(6d1ecd94dccaa8845a00187d97f33a71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Tools/Blacksmith Tools/Blacksmith Hammer.prefab using Guid(6d1ecd94dccaa8845a00187d97f33a71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbfdd93ed8d50f339026a7d32f0e4549') in 0.044451 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.119839 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Tools/Herbalism Tools
+  artifactKey: Guid(8428b7a4dff807e41a2b2e780f4afaf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Tools/Herbalism Tools using Guid(8428b7a4dff807e41a2b2e780f4afaf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e618d0f351e076f122c5252f45fe585') in 0.021396 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.026885 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Tools/Herbalism Tools/Gardening Sickle.prefab
+  artifactKey: Guid(8d04a09058532084da204623da7590a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Tools/Herbalism Tools/Gardening Sickle.prefab using Guid(8d04a09058532084da204623da7590a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c93c171fd6441f025e3c92b377b5983') in 0.020319 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.497219 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Tools/Lumberjack Tools
+  artifactKey: Guid(f064a7e6fd890754890fa1aaa44ce38f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Tools/Lumberjack Tools using Guid(f064a7e6fd890754890fa1aaa44ce38f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '778962fc032f42042d03f2d5e072d0ff') in 0.004178 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.026916 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Tools/Lumberjack Tools/Woodcutter Axe.prefab
+  artifactKey: Guid(9869592839b96d44b954d5c9b807ea8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Tools/Lumberjack Tools/Woodcutter Axe.prefab using Guid(9869592839b96d44b954d5c9b807ea8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e9e1d48ae3e43006d289206e7f6205d') in 0.118858 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.851817 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Tools/Lumberjack Tools/Woodcutter Axe.prefab
+  artifactKey: Guid(9869592839b96d44b954d5c9b807ea8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Tools/Lumberjack Tools/Woodcutter Axe.prefab using Guid(9869592839b96d44b954d5c9b807ea8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '866c78442b2cb7b78e897f253fba680b') in 0.052070 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.401646 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Tools/Lumberjack Tools/Woodcutter Axe.prefab
+  artifactKey: Guid(9869592839b96d44b954d5c9b807ea8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Tools/Lumberjack Tools/Woodcutter Axe.prefab using Guid(9869592839b96d44b954d5c9b807ea8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c8422dc1d74761caddfaccb82527222') in 0.050709 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.728149 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Tools/Lumberjack Tools/Woodcutter Axe.prefab
+  artifactKey: Guid(9869592839b96d44b954d5c9b807ea8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Tools/Lumberjack Tools/Woodcutter Axe.prefab using Guid(9869592839b96d44b954d5c9b807ea8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7bb60b9353d8d01db642660a298fb37') in 0.050841 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.529536 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Tools/Minning Tools
+  artifactKey: Guid(437c13b733e8efd4495fe0150ecc65d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Tools/Minning Tools using Guid(437c13b733e8efd4495fe0150ecc65d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '027800e060bcac266c4c09e7b071fb95') in 0.004165 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.032237 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Tools/Minning Tools/Pickaxe.prefab
+  artifactKey: Guid(f2f0ba770c268e94998b807013754f67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Tools/Minning Tools/Pickaxe.prefab using Guid(f2f0ba770c268e94998b807013754f67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '750cb3918e3d594bb8d664257101e5ff') in 0.062014 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.689791 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Tools/Minning Tools/Pickaxe.prefab
+  artifactKey: Guid(f2f0ba770c268e94998b807013754f67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Tools/Minning Tools/Pickaxe.prefab using Guid(f2f0ba770c268e94998b807013754f67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41a0acea787246f6ad95b78ae51c7070') in 0.051306 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.198264 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Tools/Minning Tools/Pickaxe.prefab
+  artifactKey: Guid(f2f0ba770c268e94998b807013754f67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Tools/Minning Tools/Pickaxe.prefab using Guid(f2f0ba770c268e94998b807013754f67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e30145c9d1f395bcac261cd5c192d041') in 0.056312 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.564402 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Tools/Minning Tools/Pickaxe.prefab
+  artifactKey: Guid(f2f0ba770c268e94998b807013754f67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Tools/Minning Tools/Pickaxe.prefab using Guid(f2f0ba770c268e94998b807013754f67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '898507340f32d07714ef6cd7fe504525') in 0.050929 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.021200 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Tools/Skinning Tools
+  artifactKey: Guid(0cc28b291deb34043be5d0ddd5296833) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Tools/Skinning Tools using Guid(0cc28b291deb34043be5d0ddd5296833) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '932749bca24a0142c1ead07db98fd8da') in 0.004141 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.214807 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Tools/Skinning Tools/Skinning Dagger.prefab
+  artifactKey: Guid(f3b7dac23e600454091508e9755bfedd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Tools/Skinning Tools/Skinning Dagger.prefab using Guid(f3b7dac23e600454091508e9755bfedd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9c0c60700f5be6b2bb350af86e3b1eb') in 0.070485 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.633240 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Tools/Skinning Tools/Skinning Dagger.prefab
+  artifactKey: Guid(f3b7dac23e600454091508e9755bfedd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Tools/Skinning Tools/Skinning Dagger.prefab using Guid(f3b7dac23e600454091508e9755bfedd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c8fe3c3936aa34ec93b02391e84b2f1') in 0.108269 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.676155 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Tools/Skinning Tools/Skinning Dagger.prefab
+  artifactKey: Guid(f3b7dac23e600454091508e9755bfedd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Tools/Skinning Tools/Skinning Dagger.prefab using Guid(f3b7dac23e600454091508e9755bfedd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7feb9aab088687a70ddff802a945ce6') in 0.037965 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.771706 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Tools/Skinning Tools/Skinning Dagger.prefab
+  artifactKey: Guid(f3b7dac23e600454091508e9755bfedd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Tools/Skinning Tools/Skinning Dagger.prefab using Guid(f3b7dac23e600454091508e9755bfedd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '242c879d6fa3c3ed3ded6f7ce5aae1fd') in 0.037603 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.607847 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Tools/Skinning Tools/Skinning Dagger.prefab
+  artifactKey: Guid(f3b7dac23e600454091508e9755bfedd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Tools/Skinning Tools/Skinning Dagger.prefab using Guid(f3b7dac23e600454091508e9755bfedd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf9d3170989ffc805103728118d0cb9e') in 0.038674 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 23.822252 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Two Hand Sword/Bidenhander.prefab
+  artifactKey: Guid(2e47ba995e3b60c4db88d809842d00a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Two Hand Sword/Bidenhander.prefab using Guid(2e47ba995e3b60c4db88d809842d00a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddf1b1ad47aa0b7742c1ddf57d2a9ec1') in 0.119239 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Two Hand Sword/Great Sword.prefab
+  artifactKey: Guid(c00741b8d4d6b794e991a942a6666cba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Two Hand Sword/Great Sword.prefab using Guid(c00741b8d4d6b794e991a942a6666cba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '008ff2ded7dd79823d1ed8cf294d15ba') in 0.162550 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.655197 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Two Hand Sword/Bidenhander.prefab
+  artifactKey: Guid(2e47ba995e3b60c4db88d809842d00a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Two Hand Sword/Bidenhander.prefab using Guid(2e47ba995e3b60c4db88d809842d00a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5abe418741e64368fb70c6b560c4ca4a') in 0.131096 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.810452 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Two Hand Sword/Bidenhander.prefab
+  artifactKey: Guid(2e47ba995e3b60c4db88d809842d00a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Two Hand Sword/Bidenhander.prefab using Guid(2e47ba995e3b60c4db88d809842d00a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b6414ce41e9f3523b72db6f5189b1f8') in 0.043868 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.850387 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Two Hand Sword/Demonic Flamberge.prefab
+  artifactKey: Guid(f84e0336cafa8d24e9009cf8eb22d545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Two Hand Sword/Demonic Flamberge.prefab using Guid(f84e0336cafa8d24e9009cf8eb22d545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4faf3f4bd26dcf881cfae5fedb311a6f') in 0.070113 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.152606 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Two Hand Sword/Demonic Flamberge.prefab
+  artifactKey: Guid(f84e0336cafa8d24e9009cf8eb22d545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Two Hand Sword/Demonic Flamberge.prefab using Guid(f84e0336cafa8d24e9009cf8eb22d545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5db5176dd63ba7c282f9aa68e0341246') in 0.068371 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.151656 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Two Hand Sword/Demonic Flamberge.prefab
+  artifactKey: Guid(f84e0336cafa8d24e9009cf8eb22d545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Two Hand Sword/Demonic Flamberge.prefab using Guid(f84e0336cafa8d24e9009cf8eb22d545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc82782a1f57ec252eb13945b61f0dd8') in 0.065072 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.548445 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Two Hand Sword/Great Sword.prefab
+  artifactKey: Guid(c00741b8d4d6b794e991a942a6666cba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Two Hand Sword/Great Sword.prefab using Guid(c00741b8d4d6b794e991a942a6666cba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49dd906f9fe9b140a9e8f7421440181a') in 0.066711 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.532172 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Two Hand Sword/Great Sword.prefab
+  artifactKey: Guid(c00741b8d4d6b794e991a942a6666cba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Two Hand Sword/Great Sword.prefab using Guid(c00741b8d4d6b794e991a942a6666cba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6595a52498a5f14bbd9ce6780fbe8088') in 0.046783 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.740676 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Two Hand Sword/Great Sword.prefab
+  artifactKey: Guid(c00741b8d4d6b794e991a942a6666cba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Two Hand Sword/Great Sword.prefab using Guid(c00741b8d4d6b794e991a942a6666cba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd628d7a2ffcc0580f496c101efd971df') in 0.045649 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.784490 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Two Hand Sword/Human Slayer.prefab
+  artifactKey: Guid(40ab2409bafb4ed4b8388a778d213228) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Two Hand Sword/Human Slayer.prefab using Guid(40ab2409bafb4ed4b8388a778d213228) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '214d65bbbe514cbd79ca792ed5469bef') in 0.044825 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.534365 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Two Hand Sword/Human Slayer.prefab
+  artifactKey: Guid(40ab2409bafb4ed4b8388a778d213228) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Two Hand Sword/Human Slayer.prefab using Guid(40ab2409bafb4ed4b8388a778d213228) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f73a21683794dc65499a3c5dd83fce90') in 0.044369 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.193934 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Two Hand Sword/Human Slayer.prefab
+  artifactKey: Guid(40ab2409bafb4ed4b8388a778d213228) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Two Hand Sword/Human Slayer.prefab using Guid(40ab2409bafb4ed4b8388a778d213228) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b057b102d1c1265df761fbf4ac373121') in 0.044402 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.798470 seconds.
+  path: Assets/_ToS/Resources/Items/Armor/Escudo 1.prefab
+  artifactKey: Guid(1db057ee0f06fcf41a9c73fab4febf65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Armor/Escudo 1.prefab using Guid(1db057ee0f06fcf41a9c73fab4febf65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47f19a7ca5decdbf510fd9e22092ddf0') in 0.045464 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.629519 seconds.
+  path: Assets/_ToS/Resources/Items/Armor/Escudo 1.prefab
+  artifactKey: Guid(1db057ee0f06fcf41a9c73fab4febf65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Armor/Escudo 1.prefab using Guid(1db057ee0f06fcf41a9c73fab4febf65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9348c26b978d78fa48cc8930e81f6d47') in 0.023839 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.862327 seconds.
+  path: Assets/_ToS/Resources/Items/Armor/Escudo 1.prefab
+  artifactKey: Guid(1db057ee0f06fcf41a9c73fab4febf65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Armor/Escudo 1.prefab using Guid(1db057ee0f06fcf41a9c73fab4febf65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'daf40113fc515a9c0358952bf366da78') in 0.026187 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.081057 seconds.
+  path: Assets/_ToS/Resources/Items/Armor/Escudo 1.prefab
+  artifactKey: Guid(1db057ee0f06fcf41a9c73fab4febf65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Armor/Escudo 1.prefab using Guid(1db057ee0f06fcf41a9c73fab4febf65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14e5cba3baa2a7fcb0eb62d9c2414c3a') in 0.022935 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.195026 seconds.
+  path: Assets/_ToS/Resources/Items/Armor/Escudo.prefab
+  artifactKey: Guid(ec3f39ed920f2c341aa3235b792362b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Armor/Escudo.prefab using Guid(ec3f39ed920f2c341aa3235b792362b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b94487ddc3d9feb8ffd6248a7f8ddc6') in 0.025113 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.384310 seconds.
+  path: Assets/_ToS/Resources/Items/Armor/Escudo.prefab
+  artifactKey: Guid(ec3f39ed920f2c341aa3235b792362b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Armor/Escudo.prefab using Guid(ec3f39ed920f2c341aa3235b792362b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a08410c5a236a0c9e586a4153ad3cc2e') in 0.024348 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.052030 seconds.
+  path: Assets/_ToS/Resources/Items/Armor/Escudo.prefab
+  artifactKey: Guid(ec3f39ed920f2c341aa3235b792362b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Armor/Escudo.prefab using Guid(ec3f39ed920f2c341aa3235b792362b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df9e23503c3f015f95753e0dbf84d5e2') in 0.077444 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 162.150969 seconds.
+  path: Assets/IconesTOS/Bidenhander.png
+  artifactKey: Guid(68cbecd0aa0a0c54a831525eaf632183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Bidenhander.png using Guid(68cbecd0aa0a0c54a831525eaf632183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea786974ee618c2ada2955a891b6e685') in 0.039446 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.220228 seconds.
+  path: Assets/IconesTOS/Bow1.png
+  artifactKey: Guid(97d5ce723c700c343805cd000c166335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Bow1.png using Guid(97d5ce723c700c343805cd000c166335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d3fc086b63d0ad5b7a7922b1ef282a1') in 0.019820 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/IconesTOS/Escudo.png
+  artifactKey: Guid(146d7af0e2291dd46b86970892fb3e29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Escudo.png using Guid(146d7af0e2291dd46b86970892fb3e29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17bc606c3dd9a92d78d3b5417f961df3') in 0.015184 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 96.134554 seconds.
+  path: Assets/IconesTOS/Escudo 1.png
+  artifactKey: Guid(dd1cf63403b51944f99906cd0da0c1e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Escudo 1.png using Guid(dd1cf63403b51944f99906cd0da0c1e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45a487118c86a07af6fe2068fb2cbaf0') in 0.019964 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 48.428086 seconds.
+  path: Assets/IconesTOS/Escudo 1.png
+  artifactKey: Guid(dd1cf63403b51944f99906cd0da0c1e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Escudo 1.png using Guid(dd1cf63403b51944f99906cd0da0c1e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fdaecd23b0b088e5a65286f8c4cef84') in 0.017824 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.021508 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\jonat\Documents\DevGames\UnityProjects\Tool\Tool\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\jonat\Documents\DevGames\UnityProjects\Tool\Tool\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.47 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.558 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2559ms)
+		BeginReloadAssembly (374ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (82ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (91ms)
+		EndReloadAssembly (1986ms)
+			LoadAssemblies (185ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (505ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (111ms)
+			SetupLoadedEditorAssemblies (960ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (40ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (179ms)
+				ProcessInitializeOnLoadAttributes (662ms)
+				ProcessInitializeOnLoadMethodAttributes (52ms)
+				AfterProcessingInitializeOnLoad (24ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (46ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.01 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5650 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 44 unused Assets / (3.4 MB). Loaded Objects now: 7022.
+Memory consumption went from 290.4 MB to 287.0 MB.
+Total: 7.786700 ms (FindLiveObjects: 0.851500 ms CreateObjectMapping: 0.300900 ms MarkObjects: 5.845500 ms  DeleteObjects: 0.786900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 581.452126 seconds.
+  path: Assets/IconesTOS/Bidenhander.png
+  artifactKey: Guid(68cbecd0aa0a0c54a831525eaf632183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Bidenhander.png using Guid(68cbecd0aa0a0c54a831525eaf632183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6d3adecd614cb8099bae4b9aaeb025c') in 0.096294 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/IconesTOS/Gardening Sickle.png
+  artifactKey: Guid(15b285a4be29cd64288096f814016ce0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Gardening Sickle.png using Guid(15b285a4be29cd64288096f814016ce0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '423793b7aa43d1dc7b0ba470d977e386') in 0.027908 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/IconesTOS/Human Slayer.png
+  artifactKey: Guid(c7538cd6c737d4e4eadba25511c90e03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Human Slayer.png using Guid(c7538cd6c737d4e4eadba25511c90e03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9cb49890a1628e585a40f3cd78551ef') in 0.019657 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/IconesTOS/Demonic Flamberge.png
+  artifactKey: Guid(523cd5b222153e34d98eb2ba6846d786) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Demonic Flamberge.png using Guid(523cd5b222153e34d98eb2ba6846d786) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd98297a93ea8d0793c2565daaa9b6b0b') in 0.018812 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000037 seconds.
-  path: Assets/IconesTOS/Woodcutter Axe.png
-  artifactKey: Guid(be40a268ea5831e47ac4ac7cf8f27733) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/IconesTOS/Woodcutter Axe.png using Guid(be40a268ea5831e47ac4ac7cf8f27733) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e99c770160c3ba37ead906d6c82beb93') in 0.042492 seconds 
+  path: Assets/IconesTOS/Crystal Staff.png
+  artifactKey: Guid(7d0c9f5a5a4f26c4daafc27e01f134f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Crystal Staff.png using Guid(7d0c9f5a5a4f26c4daafc27e01f134f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5eade6b8400dd1232c49326809fb044f') in 0.019851 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/IconesTOS/Escudo.png
+  artifactKey: Guid(146d7af0e2291dd46b86970892fb3e29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Escudo.png using Guid(146d7af0e2291dd46b86970892fb3e29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f511600468534a73f9913639017cda14') in 0.018094 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 46.160102 seconds.
+  path: Assets/_ToS/Resources/Items/Weapons/Bow/Bow1.prefab
+  artifactKey: Guid(531bcc80eebe59a44b04f10a02c36da7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_ToS/Resources/Items/Weapons/Bow/Bow1.prefab using Guid(531bcc80eebe59a44b04f10a02c36da7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e894832621f20439c6a80c27105ee954') in 1.294435 seconds 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting
