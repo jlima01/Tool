@@ -55,29 +55,32 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 
         #region Resolução
 
-        GUILayout.Label("Resolução Da Captura", EditorStyles.boldLabel);
+        if(ajusteAutomático)
+		{
+			GUILayout.Label("Resolução Da Captura", EditorStyles.boldLabel);
 
-        EditorGUILayout.Space(8);
+			EditorGUILayout.Space(8);
 
-        EditorGUILayout.BeginHorizontal();
+			EditorGUILayout.BeginHorizontal();
 
-        EditorGUILayout.BeginHorizontal();
+			EditorGUILayout.BeginHorizontal();
 
-        GUILayout.Label("Width", GUILayout.MaxWidth(50));
-        width = EditorGUILayout.IntField(width, GUILayout.MaxWidth(50));
-        GUILayout.Label("px", GUILayout.MaxWidth(25));
+			GUILayout.Label("Width", GUILayout.MaxWidth(50));
+			width = EditorGUILayout.IntField(width, GUILayout.MaxWidth(50));
+			GUILayout.Label("px", GUILayout.MaxWidth(25));
 
-        EditorGUILayout.EndHorizontal();
+			EditorGUILayout.EndHorizontal();
 
-        EditorGUILayout.BeginHorizontal();
+			EditorGUILayout.BeginHorizontal();
 
-        GUILayout.Label("Height", GUILayout.MaxWidth(50));
-        height = EditorGUILayout.IntField(height, GUILayout.MaxWidth(50));
-        GUILayout.Label("px", GUILayout.MaxWidth(25));
+			GUILayout.Label("Height", GUILayout.MaxWidth(50));
+			height = EditorGUILayout.IntField(height, GUILayout.MaxWidth(50));
+			GUILayout.Label("px", GUILayout.MaxWidth(25));
 
-        EditorGUILayout.EndHorizontal();
+			EditorGUILayout.EndHorizontal();
 
-        EditorGUILayout.EndHorizontal();
+			EditorGUILayout.EndHorizontal();
+		}
 
         #endregion
 
