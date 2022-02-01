@@ -1,3 +1,4 @@
+/*
 using UnityEngine;
 using UnityEditor;
 using System.IO;
@@ -7,7 +8,6 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 	Object[] itemsPrefabs;
 	public GameObject camera, spawn;
 	public int width, height;
-	public float margin = 1;
 	float mult = 0;
 	int i = 0;
 	//float counter = 0;
@@ -47,7 +47,6 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
         camera = EditorGUILayout.ObjectField("Camera De Captura", camera, typeof(GameObject), true) as GameObject;
         spawn = EditorGUILayout.ObjectField("Posição De Captura ", spawn, typeof(GameObject), true) as GameObject;
 		ajusteAutomático = EditorGUILayout.Toggle("Ajuste Automático ", ajusteAutomático);
-		margin = EditorGUILayout.FloatField("Margem", margin);
 
         EditorGUILayout.Space(24);
 
@@ -270,25 +269,111 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 
 			Transform itemOb = spawn.transform.GetChild(0);
 
+			Camera.main.transform.position = new Vector3(0, 0, -3);
+
 			if(item.GetComponentInChildren<MeshFilter>() != null)
 			{
 				Mesh mesh = item.GetComponentInChildren<MeshFilter>().sharedMesh;
 				
-				float maxExtent = mesh.bounds.extents.magnitude;
-				float minDistance = (maxExtent * margin) / Mathf.Sin(Mathf.Deg2Rad * Camera.main.fieldOfView / 2f);
-				Camera.main.transform.position = itemOb.transform.position - Vector3.forward * minDistance;
-				Camera.main.nearClipPlane = minDistance - maxExtent;
+				Vector3 posStart1 = Camera.main.WorldToScreenPoint(new Vector3(mesh.bounds.min.x, mesh.bounds.min.y, mesh.bounds.min.z));
+				Vector3 posEnd1 = Camera.main.WorldToScreenPoint(new Vector3(mesh.bounds.max.x, mesh.bounds.max.y, mesh.bounds.min.z));
+				Vector3 posStart2 = Camera.main.WorldToScreenPoint(new Vector3(mesh.bounds.min.x, mesh.bounds.min.z, mesh.bounds.min.y));
+				Vector3 posEnd2 = Camera.main.WorldToScreenPoint(new Vector3(mesh.bounds.max.x, mesh.bounds.max.z, mesh.bounds.min.y));
 
+				centerPos = mesh.bounds.center;
+
+				float widthObj = 0;
+				float heightObj = 0;
+				float widthObj1 = (float)(posEnd1.x - posStart1.x);
+				float heightObj1 = (float)(posEnd1.y - posStart1.y);
+				float widthObj2 = (float)(posEnd2.x - posStart2.x);
+				float heightObj2 = (float)(posEnd2.y - posStart2.y);
+
+				if(heightObj1 > heightObj2)
+				{
+					heightObj = heightObj1;
+					widthObj = widthObj1;
+				}
+				else
+				{
+					heightObj = heightObj2;
+					widthObj = widthObj2;
+				}
+
+				if(widthObj > width)
+				{
+					mult = width * 1/widthObj;
+				}
+				
+				if(heightObj > height)
+				{
+					mult = height * 1/heightObj;
+				}
+
+				if((widthObj <= width) && (heightObj <= height))
+				{
+					mult = 1;
+				}
+
+				itemOb.transform.localScale *= mult;
+
+				Debug.Log("Width1: " + widthObj + "Height: " + heightObj + "Mult: " + mult);
 			}
 			else if(item.GetComponentInChildren<SkinnedMeshRenderer>() != null)
 			{
 				Mesh mesh = item.GetComponentInChildren<SkinnedMeshRenderer>().sharedMesh;
 				
-				float maxExtent = mesh.bounds.extents.magnitude;
-				float minDistance = (maxExtent * margin) / Mathf.Sin(Mathf.Deg2Rad * Camera.main.fieldOfView / 2f);
-				Camera.main.transform.position = itemOb.transform.position - Vector3.forward * minDistance;
-				Camera.main.nearClipPlane = minDistance - maxExtent;
+				Vector3 posStart1 = Camera.main.WorldToScreenPoint(new Vector3(mesh.bounds.min.x, mesh.bounds.min.y, mesh.bounds.min.z));
+				Vector3 posEnd1 = Camera.main.WorldToScreenPoint(new Vector3(mesh.bounds.max.x, mesh.bounds.max.y, mesh.bounds.min.z));
+				Vector3 posStart2 = Camera.main.WorldToScreenPoint(new Vector3(mesh.bounds.min.x, mesh.bounds.min.z, mesh.bounds.min.y));
+				Vector3 posEnd2 = Camera.main.WorldToScreenPoint(new Vector3(mesh.bounds.max.x, mesh.bounds.max.z, mesh.bounds.min.y));
+				
+				centerPos = mesh.bounds.center;
+
+				float widthObj = 0;
+				float heightObj = 0;
+				float widthObj1 = (float)(posEnd1.x - posStart1.x);
+				float heightObj1 = (float)(posEnd1.y - posStart1.y);
+				float widthObj2 = (float)(posEnd2.x - posStart2.x);
+				float heightObj2 = (float)(posEnd2.y - posStart2.y);
+
+				if(heightObj1 > heightObj2)
+				{
+					heightObj = heightObj1;
+					widthObj = widthObj1;
+				}
+				else
+				{
+					heightObj = heightObj2;
+					widthObj = widthObj2;
+				}
+
+				if(widthObj > width)
+				{
+					mult = width * 1/widthObj;
+				}
+				
+				if(heightObj > height)
+				{
+					mult = height * 1/heightObj;
+				}
+
+				if((widthObj <= width) && (heightObj <= height))
+				{
+					mult = 1;
+				}
+
+				if((widthObj <= width) && (heightObj <= height))
+				{
+					mult = 1;
+				}
+				
+				itemOb.transform.localScale *= mult;
+
+				Debug.Log("Width2: " + widthObj + "Height: " + heightObj + "Mult: " + mult);
 			}
+
+			Camera.main.transform.position = new Vector3 (centerPos.x, centerPos.y, -3);
 			
 			GenerateImages();
 
@@ -351,3 +436,4 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 	
 	#endregion
 }
+*/

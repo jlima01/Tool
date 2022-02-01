@@ -35,8 +35,8 @@ public class ScreenShoot : MonoBehaviour
  
         texture.Apply();
 
-    	//texture.ReadPixels(new Rect(clipX/2, clipY/2, cameraWidth - clipX, cameraHeight - clipY), 0, 0);
-		texture.ReadPixels(new Rect((cameraWidth - width)/2, (cameraHeight - height)/2, cameraWidth - clipX, cameraHeight - clipY), 0, 0);
+    	texture.ReadPixels(new Rect(0, 0, cameraWidth, cameraHeight), 0, 0);
+		//texture.ReadPixels(new Rect((cameraWidth - width)/2, (cameraHeight - height)/2, cameraWidth - clipX, cameraHeight - clipY), 0, 0);
     	texture.Apply();
 
     	byte[] bytes = texture.EncodeToPNG();
