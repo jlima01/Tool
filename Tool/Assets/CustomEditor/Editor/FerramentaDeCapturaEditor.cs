@@ -6,13 +6,14 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 	#region Variáveis ocultas
 	Object[] itemsPrefabs;
 	public GameObject camera, spawn;
+	public static Ajustment ajustment;
+	public static ItemType itemType;
 	public int width, height;
 	public float margin = 1;
 	float mult = 0;
 	int i = 0;
 	//float counter = 0;
 	bool showBackgrounds = false;//, buttonPressed = false;
-	public bool ajusteAutomático = false;
 	public string nomeDaPasta = "IconesDosItens", prefabsPathName = "";
 	string itemId = "item";
 	Vector3 centerPos;
@@ -37,6 +38,23 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 
 	#endregion
 
+	#region Enum
+
+	public enum Ajustment
+	{
+		Automatico,
+		Manual,
+	}
+	public enum ItemType
+	{
+		Bow,
+		Staff,
+		Tool,
+		Sword,
+	}
+
+	#endregion
+
 	#region Desenhar variáveis
     private void DrawVariables()
     {
@@ -46,16 +64,22 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 
         camera = EditorGUILayout.ObjectField("Camera De Captura", camera, typeof(GameObject), true) as GameObject;
         spawn = EditorGUILayout.ObjectField("Posição De Captura ", spawn, typeof(GameObject), true) as GameObject;
-		ajusteAutomático = EditorGUILayout.Toggle("Ajuste Automático ", ajusteAutomático);
-		margin = EditorGUILayout.FloatField("Margem", margin);
 
-        EditorGUILayout.Space(24);
+		EditorGUILayout.Space(4);
+
+		GUILayout.Label("Tipo de Ajuste", EditorStyles.boldLabel);
+
+		EditorGUILayout.Space(4);
+
+		ajustment = (Ajustment)EditorGUILayout.EnumPopup(ajustment);
+		
+        EditorGUILayout.Space(18);
 
         #endregion
 
-        #region Resolução
+        #region Resolução e Margem
 
-        if(ajusteAutomático)
+        if(ajustment == Ajustment.Automatico)
 		{
 			GUILayout.Label("Resolução Da Captura", EditorStyles.boldLabel);
 
@@ -80,6 +104,24 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 			EditorGUILayout.EndHorizontal();
 
 			EditorGUILayout.EndHorizontal();
+
+			EditorGUILayout.Space(4);
+
+			EditorGUILayout.BeginHorizontal();
+
+			GUILayout.Label("Margem", GUILayout.MaxWidth(75));
+
+			margin = EditorGUILayout.Slider(margin, 0, 10, GUILayout.MaxWidth(125));
+
+			EditorGUILayout.EndHorizontal();
+		}
+		else
+		{
+			GUILayout.Label("Tipo de Item", EditorStyles.boldLabel);
+
+			EditorGUILayout.Space(2);
+
+			itemType = (ItemType)EditorGUILayout.EnumPopup(itemType, GUILayout.MaxWidth(75));
 		}
 
         #endregion
@@ -167,7 +209,7 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 
         #region Autor
 
-        EditorGUILayout.Space(100);
+        EditorGUILayout.Space(80);
 
         GUILayout.Label("Ferramenta desenvolvida por:  Jônatas Lima");
 
@@ -202,7 +244,8 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 			camera.AddComponent<ScreenShoot>();
 		}
 		
-		ajusteAutomático = true;
+		margin = 1;
+		ajustment = Ajustment.Automatico;
 		width = 1024;
 		height = 1024;
 	}
@@ -273,24 +316,43 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 
 			Transform itemOb = spawn.transform.GetChild(0);
 
-			if(item.GetComponentInChildren<MeshFilter>() != null)
+			if(ajustment == Ajustment.Automatico)
 			{
-				Mesh mesh = item.GetComponentInChildren<MeshFilter>().sharedMesh;
-				
-				float maxExtent = mesh.bounds.extents.magnitude;
-				float minDistance = (maxExtent * margin) / Mathf.Sin(Mathf.Deg2Rad * Camera.main.fieldOfView / 2f);
-				Camera.main.transform.position = itemOb.transform.position - Vector3.forward * minDistance;
-				Camera.main.nearClipPlane = minDistance - maxExtent;
+				if(item.GetComponentInChildren<MeshFilter>() != null)
+				{
+					Mesh mesh = item.GetComponentInChildren<MeshFilter>().sharedMesh;
+					
+					float maxExtent = mesh.bounds.extents.magnitude;
+					float minDistance = (maxExtent * margin) / Mathf.Sin(Mathf.Deg2Rad * Camera.main.fieldOfView / 2f);
+					Camera.main.transform.position = itemOb.transform.position - Vector3.forward * minDistance;
+					Camera.main.nearClipPlane = minDistance - maxExtent;
 
+				}
+				else if(item.GetComponentInChildren<SkinnedMeshRenderer>() != null)
+				{
+					Mesh mesh = item.GetComponentInChildren<SkinnedMeshRenderer>().sharedMesh;
+					
+					float maxExtent = mesh.bounds.extents.magnitude;
+					float minDistance = (maxExtent * margin) / Mathf.Sin(Mathf.Deg2Rad * Camera.main.fieldOfView / 2f);
+					Camera.main.transform.position = itemOb.transform.position - Vector3.forward * minDistance;
+					Camera.main.nearClipPlane = minDistance - maxExtent;
+				}
 			}
-			else if(item.GetComponentInChildren<SkinnedMeshRenderer>() != null)
+			else
 			{
-				Mesh mesh = item.GetComponentInChildren<SkinnedMeshRenderer>().sharedMesh;
+				if(item.GetComponentInChildren<MeshFilter>() != null)
+				{
+					Mesh mesh = item.GetComponentInChildren<MeshFilter>().sharedMesh;
+
+					Camera.main.transform.position = new Vector3(mesh.bounds.center.x, mesh.bounds.center.y, -3);
+				}
+				else if(item.GetComponentInChildren<SkinnedMeshRenderer>() != null)
+				{
+					Mesh mesh = item.GetComponentInChildren<SkinnedMeshRenderer>().sharedMesh;
+
+					Camera.main.transform.position = new Vector3(mesh.bounds.center.x, mesh.bounds.center.y, -3);
+				}
 				
-				float maxExtent = mesh.bounds.extents.magnitude;
-				float minDistance = (maxExtent * margin) / Mathf.Sin(Mathf.Deg2Rad * Camera.main.fieldOfView / 2f);
-				Camera.main.transform.position = itemOb.transform.position - Vector3.forward * minDistance;
-				Camera.main.nearClipPlane = minDistance - maxExtent;
 			}
 			
 			GenerateImages();
@@ -299,7 +361,6 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 
 			if(i > itemsPrefabs.Length - 1)
 			{
-				//buttonPressed = false;
 				i = 0;
 			}
 		}
@@ -316,7 +377,6 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
     {
 		if(camera.GetComponent<ScreenShoot>() != null)
 		{
-			//camera.GetComponent<ScreenShoot>().TakeScreenShoot(Camera.main.pixelWidth, Camera.main.pixelHeight, itemId, spawn.transform, nomeDaPasta);
 			camera.GetComponent<ScreenShoot>().TakeScreenShoot(width, height, Camera.main.pixelWidth, Camera.main.pixelHeight, itemId, spawn.transform, nomeDaPasta);
 		}	
 		else
@@ -332,10 +392,11 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 	{
 		width = 0;
 		height = 0;
+		margin = 0;
 		i = 0;
 		camera = null;
 		spawn = null;
-		ajusteAutomático = false;
+		ajustment = Ajustment.Automatico;
 		
 		if(GameObject.FindGameObjectWithTag("Spawn") != null)
 		{
