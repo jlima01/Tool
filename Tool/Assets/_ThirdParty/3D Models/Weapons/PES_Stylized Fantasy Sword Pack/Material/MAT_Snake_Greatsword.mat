@@ -32,12 +32,14 @@ Material:
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2450
   stringTagMap:
+    MotionVector: User
     RenderType: TransparentCutout
   disabledShaderPasses:
   - TransparentDepthPrepass
   - TransparentDepthPostpass
   - TransparentBackface
   - RayTracingPrepass
+  - MOTIONVECTORS
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -108,7 +110,7 @@ Material:
     m_Ints: []
     m_Floats:
     - Alpha_Threshold: 0
-    - Brightness: 1
+    - Brightness: 1.32
     - Fresnel: 0
     - FresnelPower: 2.5
     - HueShift: 0
@@ -184,8 +186,8 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - FresnelColor: {r: 1, g: 1, b: 1, a: 0}
-    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 1}
+    - _Color: {r: 0.49056596, g: 0.49056596, b: 0.49056596, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _MaskedColor: {r: 1, g: 1, b: 1, a: 1}

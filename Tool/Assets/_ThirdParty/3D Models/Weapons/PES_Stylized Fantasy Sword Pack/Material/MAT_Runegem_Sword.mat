@@ -94,7 +94,7 @@ Material:
     m_Ints: []
     m_Floats:
     - Alpha_Threshold: 0
-    - Brightness: 1
+    - Brightness: 1.68
     - Fresnel: 0
     - FresnelPower: 2.5
     - HueShift: 0
@@ -125,10 +125,10 @@ Material:
     - _Metallic: 0
     - _Metallic_Remap_Max: 1
     - _Metallic_Remap_Max_1: 1
-    - _Metallic_Remap_Max_2: 0.62
-    - _Metallic_Remap_Min: 0.308
-    - _Metallic_Remap_Min_1: 0
-    - _Metallic_Remap_Min_2: 0
+    - _Metallic_Remap_Max_2: 0.638
+    - _Metallic_Remap_Min: 0
+    - _Metallic_Remap_Min_1: 0.782
+    - _Metallic_Remap_Min_2: 0.427
     - _Mode: 0
     - _NormalScale: 1
     - _OcclusionStrength: 1
