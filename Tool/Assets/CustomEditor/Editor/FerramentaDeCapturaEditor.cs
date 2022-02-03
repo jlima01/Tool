@@ -13,7 +13,7 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 	float cameraPositionStaff = 1.75f, cameraPositionSword = 2, cameraPositionTool = 1.5f, cameraPositionBow = 1.75f;
 	int i = 0;
 	bool showBackgrounds = false;
-	public string nomeDaPasta = "IconesDosItens", prefabsPathName = "Items", swordPathName = "Items/Weapons/Two Hand Sword", toolsPathName = "Items/Weapons/Tools", staffPathName = "Items/Weapons/Staff", bowPathName = "Items/Weapons/Bow";
+	public string nomeDaPasta = "IconesDosItens", prefabsPathName = "Items", pathName = "Items", swordPathName = "Items/Weapons/Two Hand Sword", toolsPathName = "Items/Weapons/Tools", staffPathName = "Items/Weapons/Staff", bowPathName = "Items/Weapons/Bow";
 	string itemId = "item";
 
 	#endregion
@@ -126,6 +126,8 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 			margin = EditorGUILayout.Slider(margin, 0, 10, GUILayout.MaxWidth(125));
 
 			EditorGUILayout.EndHorizontal();
+
+			pathName = prefabsPathName;
 		}
 		else
 		{
@@ -138,25 +140,25 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 				case ItemType.Bow:
 					cameraPositionBow = EditorGUILayout.Slider(cameraPositionBow, 0, 10, GUILayout.MaxWidth(125));
 					camPos = cameraPositionBow;
-					prefabsPathName = bowPathName;
+					pathName = bowPathName;
 				break;
 
 				case ItemType.Staff:
 					cameraPositionStaff = EditorGUILayout.Slider(cameraPositionStaff, 0, 10, GUILayout.MaxWidth(125));
 					camPos = cameraPositionStaff;
-					prefabsPathName = staffPathName;
+					pathName = staffPathName;
 				break;
 
 				case ItemType.Sword:
 					cameraPositionSword = EditorGUILayout.Slider(cameraPositionSword, 0, 10, GUILayout.MaxWidth(125));
 					camPos = cameraPositionSword;
-					prefabsPathName = swordPathName;
+					pathName = swordPathName;
 				break;
 
 				case ItemType.Tool:
 					cameraPositionTool = EditorGUILayout.Slider(cameraPositionTool, 0, 10, GUILayout.MaxWidth(125));
 					camPos = cameraPositionTool;
-					prefabsPathName = toolsPathName;
+					pathName = toolsPathName;
 				break;
 			}
 
@@ -218,7 +220,7 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
         EditorGUILayout.BeginHorizontal();
 
         GUILayout.Label("     Resources/", GUILayout.MaxWidth(90));
-        prefabsPathName = EditorGUILayout.TextField(prefabsPathName, GUILayout.MaxWidth(200));
+        pathName = EditorGUILayout.TextField(pathName, GUILayout.MaxWidth(200));
 
         EditorGUILayout.EndHorizontal();
 
@@ -301,13 +303,13 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 	{
 		EditorGUI.indentLevel++;
 	
-		if(prefabsPathName == null || prefabsPathName == "" || Resources.LoadAll(prefabsPathName, typeof(GameObject)) == null)
+		if(pathName == null || pathName == "" || Resources.LoadAll(pathName, typeof(GameObject)) == null)
 		{
 			Debug.Log("Pasta inesistente ou vazia!");
 		}
 		else
 		{
-			itemsPrefabs = Resources.LoadAll(prefabsPathName, typeof(GameObject));
+			itemsPrefabs = Resources.LoadAll(pathName, typeof(GameObject));
 		}
 
 		if(showBackgrounds)
