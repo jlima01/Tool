@@ -10,13 +10,11 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 	public static ItemType itemType;
 	public int width, height;
 	public float margin = 1, camPos = -3;
-	float mult = 0, cameraPositionStaff = 1.75f, cameraPositionSword = 2, cameraPositionTool = 1.5f, cameraPositionBow = 1.75f;
+	float cameraPositionStaff = 1.75f, cameraPositionSword = 2, cameraPositionTool = 1.5f, cameraPositionBow = 1.75f;
 	int i = 0;
-	//float counter = 0;
-	bool showBackgrounds = false;//, buttonPressed = false;
-	public string nomeDaPasta = "IconesDosItens", prefabsPathName = "", swordPathName = "Items/Weapons/Two Hand Sword", toolsPathName = "Items/Weapons/Tools", staffPathName = "Items/Weapons/Staff", bowPathName = "Items/Weapons/Bow";
+	bool showBackgrounds = false;
+	public string nomeDaPasta = "IconesDosItens", prefabsPathName = "Items", swordPathName = "Items/Weapons/Two Hand Sword", toolsPathName = "Items/Weapons/Tools", staffPathName = "Items/Weapons/Staff", bowPathName = "Items/Weapons/Bow";
 	string itemId = "item";
-	Vector3 centerPos;
 
 	#endregion
 
@@ -38,7 +36,7 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 
 	#endregion
 
-	#region Enum
+	#region Enums
 
 	public enum Ajustment
 	{
@@ -128,8 +126,6 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 			margin = EditorGUILayout.Slider(margin, 0, 10, GUILayout.MaxWidth(125));
 
 			EditorGUILayout.EndHorizontal();
-
-			//prefabsPathName = "Items";
 		}
 		else
 		{
@@ -137,7 +133,32 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 
 			GUILayout.Label("Posição da Camera", GUILayout.MaxWidth(125));
 
-			camPos = EditorGUILayout.Slider(camPos, 0, 10, GUILayout.MaxWidth(125));
+			switch(itemType)
+			{
+				case ItemType.Bow:
+					cameraPositionBow = EditorGUILayout.Slider(cameraPositionBow, 0, 10, GUILayout.MaxWidth(125));
+					camPos = cameraPositionBow;
+					prefabsPathName = bowPathName;
+				break;
+
+				case ItemType.Staff:
+					cameraPositionStaff = EditorGUILayout.Slider(cameraPositionStaff, 0, 10, GUILayout.MaxWidth(125));
+					camPos = cameraPositionStaff;
+					prefabsPathName = staffPathName;
+				break;
+
+				case ItemType.Sword:
+					cameraPositionSword = EditorGUILayout.Slider(cameraPositionSword, 0, 10, GUILayout.MaxWidth(125));
+					camPos = cameraPositionSword;
+					prefabsPathName = swordPathName;
+				break;
+
+				case ItemType.Tool:
+					cameraPositionTool = EditorGUILayout.Slider(cameraPositionTool, 0, 10, GUILayout.MaxWidth(125));
+					camPos = cameraPositionTool;
+					prefabsPathName = toolsPathName;
+				break;
+			}
 
 			EditorGUILayout.EndHorizontal();
 
@@ -148,29 +169,6 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 			EditorGUILayout.Space(2);
 
 			itemType = (ItemType)EditorGUILayout.EnumPopup(itemType, GUILayout.MaxWidth(75));
-
-			switch(itemType)
-			{
-				case ItemType.Bow:
-					camPos = cameraPositionBow;
-					prefabsPathName = bowPathName;
-				break;
-
-				case ItemType.Staff:
-					camPos = cameraPositionStaff;
-					prefabsPathName = staffPathName;
-				break;
-
-				case ItemType.Sword:
-					camPos = cameraPositionSword;
-					prefabsPathName = swordPathName;
-				break;
-
-				case ItemType.Tool:
-					camPos = cameraPositionTool;
-					prefabsPathName = toolsPathName;
-				break;
-			}
 		}
 
         #endregion
@@ -184,11 +182,8 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 		EditorGUILayout.Space(8);
 
 		showBackgrounds = EditorGUILayout.Foldout(showBackgrounds, "ItemsPrefabs", true);
-		
-        if(showBackgrounds)
-		{
-			SetPrefabs();
-		}
+
+		SetPrefabs();
 
         EditorGUILayout.Space(8);
 
@@ -315,11 +310,14 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 			itemsPrefabs = Resources.LoadAll(prefabsPathName, typeof(GameObject));
 		}
 
-		int arraySize = Mathf.Max(0, EditorGUILayout.IntField("Quantidade", itemsPrefabs.Length));
-
-		for(int i = 0; i < itemsPrefabs.Length; i++)
+		if(showBackgrounds)
 		{
-			itemsPrefabs[i] = EditorGUILayout.ObjectField("Element " + i, itemsPrefabs[i], typeof(GameObject), false) as GameObject;
+			int arraySize = Mathf.Max(0, EditorGUILayout.IntField("Quantidade", itemsPrefabs.Length));
+
+			for(int i = 0; i < itemsPrefabs.Length; i++)
+			{
+				itemsPrefabs[i] = EditorGUILayout.ObjectField("Element " + i, itemsPrefabs[i], typeof(GameObject), false) as GameObject;
+			}
 		}
 
 		EditorGUI.indentLevel--;
