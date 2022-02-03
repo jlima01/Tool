@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 67431999}
   m_Layer: 0
-  m_Name: ------- Level -----------------
+  m_Name: ---- Spawn Point ----------------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -958,7 +958,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1490569666}
   m_Layer: 0
-  m_Name: ------ Cameras --------------
+  m_Name: ------ Cameras ------------------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1092,7 +1092,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.86964536
+  near clip plane: 1.0284301
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -1120,7 +1120,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1823688464}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.01983565, y: -0.019717168, z: -3}
+  m_LocalPosition: {x: 0, y: 0, z: -1.7140502}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1263,7 +1263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc2425c61264c5c4ea033759c8231e44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: Orc Staff
+  itemId: Demonic Flamberge
 --- !u!1 &2013410473
 GameObject:
   m_ObjectHideFlags: 1
