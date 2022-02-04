@@ -1,0 +1,22 @@
+Manual para uso da Ferramenta
+
+1. Abra a ferramenta pela aba Tools, ao lado(esquerdo) da aba Window, na parte superior da tela.
+
+2. Você pode arrastar a janela da ferramenta e encaixá-la ao lado do Inspector ou onde achar que fica melhor para seu uso.
+
+3. Aperte o Botão "Preencher parâmetros" da ferramenta para completar os campos que estão vazios de forma automática, ou se
+desejar preencha-os manualmente.
+
+4. Caso já tenha criado uma pasta para armazenar as imagens geradas, coloque o nome da pasta no campo "Salvar imagens em", 
+caso não tenha criado uma pasta, apenas precione o botão "Criar pasta" e as imagens serão criadas numa pasta genérica. 
+
+5. Selecione o tipo de ajuste que deseja:
+
+Ajuste Automático: Preencha os campos resolução e margem com os valores desejados.
+
+Ajuste Manual: Preencha os campos resolução e Posição da Camera com os valores desejados.
+
+6. Aperte o botão "Gerar Imagens" repetidamente até atingir a quantidade de itens total.
+
+7. Caso as imagens não apareçam na pasta criada, será necessária dar um "Refresh" na pasta do projeto.
+Para isso, aperte o botão direito do mouse na pasta das imagens e selecione a opção "Refresh".

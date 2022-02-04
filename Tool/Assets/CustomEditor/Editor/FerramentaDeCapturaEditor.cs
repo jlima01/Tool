@@ -100,7 +100,9 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 		EditorGUILayout.BeginHorizontal();
 
 		GUILayout.Label("Width", GUILayout.MaxWidth(50));
+
 		width = EditorGUILayout.IntField(width, GUILayout.MaxWidth(50));
+
 		GUILayout.Label("px", GUILayout.MaxWidth(25));
 
 		EditorGUILayout.EndHorizontal();
@@ -108,7 +110,9 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 		EditorGUILayout.BeginHorizontal();
 
 		GUILayout.Label("Height", GUILayout.MaxWidth(50));
+
 		height = EditorGUILayout.IntField(height, GUILayout.MaxWidth(50));
+
 		GUILayout.Label("px", GUILayout.MaxWidth(25));
 
 		EditorGUILayout.EndHorizontal();
@@ -220,6 +224,7 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
         EditorGUILayout.BeginHorizontal();
 
         GUILayout.Label("     Resources/", GUILayout.MaxWidth(90));
+		
         pathName = EditorGUILayout.TextField(pathName, GUILayout.MaxWidth(200));
 
         EditorGUILayout.EndHorizontal();
