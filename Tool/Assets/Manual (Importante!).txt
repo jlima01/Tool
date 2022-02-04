@@ -20,3 +20,6 @@ Ajuste Manual: Preencha os campos resolução e Posição da Camera com os valor
 
 7. Caso as imagens não apareçam na pasta criada, será necessária dar um "Refresh" na pasta do projeto.
 Para isso, aperte o botão direito do mouse na pasta das imagens e selecione a opção "Refresh".
+
+Obs: Caso os resultados não estejam satidfatórios (imagens com objetos cortados), basta ajustar os valores dos campos
+Margem para o ajuste Automático e Posição da Camera para o ajuste manual.

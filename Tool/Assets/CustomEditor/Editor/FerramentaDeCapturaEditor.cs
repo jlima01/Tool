@@ -10,9 +10,9 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 	public static ItemType itemType;
 	public int width, height;
 	public float margin = 1, camPos = -3;
-	float cameraPositionStaff = 1.75f, cameraPositionSword = 2, cameraPositionTool = 1.5f, cameraPositionBow = 1.75f;
+	float cameraPositionStaff = 1.75f, cameraPositionSword = 2, cameraPositionTool = 1.5f, cameraPositionBow = 1.75f;//, counter = 0;
 	int i = 0;
-	bool showBackgrounds = false;
+	bool showBackgrounds = false, changeMode = false;
 	public string nomeDaPasta = "IconesDosItens", prefabsPathName = "Items", pathName = "Items", swordPathName = "Items/Weapons/Two Hand Sword", toolsPathName = "Items/Weapons/Tools", staffPathName = "Items/Weapons/Staff", bowPathName = "Items/Weapons/Bow";
 	string itemId = "item";
 
@@ -132,6 +132,8 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 			EditorGUILayout.EndHorizontal();
 
 			pathName = prefabsPathName;
+
+			changeMode = false;
 		}
 		else
 		{
@@ -164,6 +166,12 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 					camPos = cameraPositionTool;
 					pathName = toolsPathName;
 				break;
+			}
+
+			if(!changeMode)
+			{
+				i = 0;
+				changeMode = true;
 			}
 
 			EditorGUILayout.EndHorizontal();
@@ -295,7 +303,11 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 			camera.AddComponent<ScreenShoot>();
 		}
 		
-		margin = 1;
+		margin = 2.5f;
+		cameraPositionBow = 4;
+		cameraPositionStaff = 4;
+		cameraPositionSword = 4;
+		cameraPositionTool = 4;
 		ajustment = Ajustment.Automatico;
 		width = 1024;
 		height = 1024;
