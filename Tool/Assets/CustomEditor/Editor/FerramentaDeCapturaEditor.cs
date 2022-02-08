@@ -260,14 +260,14 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 
         EditorGUILayout.Space(16);
 
+		if (GUILayout.Button("Preencher Parâmetros"))
+		{
+			SetParameters();
+			SetPrefabs();
+		}
+
         if(!buttomPressed)
 		{
-			if (GUILayout.Button("Preencher Parâmetros"))
-			{
-				SetParameters();
-				SetPrefabs();
-			}
-
 			if (GUILayout.Button("Gerar Imagens"))
 			{
 				buttomPressed = true;
@@ -277,11 +277,10 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 			{
 				Reset();
 			}
-
-			if (GUILayout.Button("Resetar Contador"))
+			/* if (GUILayout.Button("Resetar Contador"))
 			{
 				ResetCounter();
-			}
+			} */
 		}
 
         #endregion
@@ -386,77 +385,92 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 		if(itemsPrefabs == null)
 		{
 			Debug.Log("Nenhum item/prefab adicionado!");
+            buttomPressed = false;
+			counter = 0;
+			i = 0;
 			return;
 		}
-
-		GenerateItens(i);
+		else
+		{
+			GenerateItens(i);
+		}
 	}
 	private void GenerateItens(int counter)
 	{
-		if(itemsPrefabs[counter] != null && spawn != null)
+		if(itemsPrefabs.Length > 0)
 		{
-			Instantiate(itemsPrefabs[counter], spawn.transform.position, spawn.transform.rotation, spawn.transform);
-			itemId = itemsPrefabs[counter].name;
-
-			GameObject item = itemsPrefabs[counter] as GameObject;
-
-			Transform itemOb = spawn.transform.GetChild(0);
-
-			if(ajustment == Ajustment.Automatico)
+			if(spawn != null)
 			{
-				if(item.GetComponentInChildren<MeshFilter>() != null)
-				{
-					Mesh mesh = item.GetComponentInChildren<MeshFilter>().sharedMesh;
-					
-					float maxExtent = mesh.bounds.extents.magnitude;
-					float minDistance = (maxExtent * margin) / Mathf.Sin(Mathf.Deg2Rad * Camera.main.fieldOfView / 2f);
-					Camera.main.transform.position = itemOb.transform.position - Vector3.forward * minDistance;
-					Camera.main.nearClipPlane = minDistance - maxExtent;
+				Instantiate(itemsPrefabs[counter], spawn.transform.position, spawn.transform.rotation, spawn.transform);
+				itemId = itemsPrefabs[counter].name;
 
-				}
-				else if(item.GetComponentInChildren<SkinnedMeshRenderer>() != null)
+				GameObject item = itemsPrefabs[counter] as GameObject;
+
+				Transform itemOb = spawn.transform.GetChild(0);
+
+				if(ajustment == Ajustment.Automatico)
 				{
-					Mesh mesh = item.GetComponentInChildren<SkinnedMeshRenderer>().sharedMesh;
+					if(item.GetComponentInChildren<MeshFilter>() != null)
+					{
+						Mesh mesh = item.GetComponentInChildren<MeshFilter>().sharedMesh;
+						
+						float maxExtent = mesh.bounds.extents.magnitude;
+						float minDistance = (maxExtent * margin) / Mathf.Sin(Mathf.Deg2Rad * Camera.main.fieldOfView / 2f);
+						Camera.main.transform.position = itemOb.transform.position - Vector3.forward * minDistance;
+						Camera.main.nearClipPlane = minDistance - maxExtent;
+
+					}
+					else if(item.GetComponentInChildren<SkinnedMeshRenderer>() != null)
+					{
+						Mesh mesh = item.GetComponentInChildren<SkinnedMeshRenderer>().sharedMesh;
+						
+						float maxExtent = mesh.bounds.extents.magnitude;
+						float minDistance = (maxExtent * margin) / Mathf.Sin(Mathf.Deg2Rad * Camera.main.fieldOfView / 2f);
+						Camera.main.transform.position = itemOb.transform.position - Vector3.forward * minDistance;
+						Camera.main.nearClipPlane = minDistance - maxExtent;
+					}
+				}
+				else
+				{
+					if(item.GetComponentInChildren<MeshFilter>() != null)
+					{
+						Mesh mesh = item.GetComponentInChildren<MeshFilter>().sharedMesh;
+
+						//Camera.main.transform.position = new Vector3(mesh.bounds.center.x, mesh.bounds.center.y, -camPos);
+						Camera.main.transform.position = new Vector3(0, 0, -camPos);
+					}
+					else if(item.GetComponentInChildren<SkinnedMeshRenderer>() != null)
+					{
+						Mesh mesh = item.GetComponentInChildren<SkinnedMeshRenderer>().sharedMesh;
+
+						//Camera.main.transform.position = new Vector3(mesh.bounds.center.x, mesh.bounds.center.y, -camPos);
+						Camera.main.transform.position = new Vector3(0, 0, -camPos);
+					}
 					
-					float maxExtent = mesh.bounds.extents.magnitude;
-					float minDistance = (maxExtent * margin) / Mathf.Sin(Mathf.Deg2Rad * Camera.main.fieldOfView / 2f);
-					Camera.main.transform.position = itemOb.transform.position - Vector3.forward * minDistance;
-					Camera.main.nearClipPlane = minDistance - maxExtent;
+				}
+				
+				GenerateImages();
+
+				i++;
+
+				if(i > itemsPrefabs.Length - 1)
+				{
+					i = 0;
+					buttomPressed = false;
+					counter = 0;
 				}
 			}
 			else
 			{
-				if(item.GetComponentInChildren<MeshFilter>() != null)
-				{
-					Mesh mesh = item.GetComponentInChildren<MeshFilter>().sharedMesh;
-
-					//Camera.main.transform.position = new Vector3(mesh.bounds.center.x, mesh.bounds.center.y, -camPos);
-					Camera.main.transform.position = new Vector3(0, 0, -camPos);
-				}
-				else if(item.GetComponentInChildren<SkinnedMeshRenderer>() != null)
-				{
-					Mesh mesh = item.GetComponentInChildren<SkinnedMeshRenderer>().sharedMesh;
-
-					//Camera.main.transform.position = new Vector3(mesh.bounds.center.x, mesh.bounds.center.y, -camPos);
-					Camera.main.transform.position = new Vector3(0, 0, -camPos);
-				}
-				
-			}
-			
-			GenerateImages();
-
-			i++;
-
-			if(i > itemsPrefabs.Length - 1)
-			{
-				i = 0;
 				buttomPressed = false;
 				counter = 0;
+				i = 0;
+				Debug.Log("Sem PosiçãoDeCaptura para gerar itens!");
 			}
 		}
 		else
 		{
-			Debug.Log("No items or spawn to generate items!");
+			Debug.Log("Sem Itens para gerar imagens!");
 		}
 	}
 
