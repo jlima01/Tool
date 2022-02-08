@@ -422,3 +422,156 @@ Received Import Request.
   path: Assets/IconesTOS/Short Bow.png
   artifactKey: Guid(69ed08aabf1e5904ca9716fb1fc3bf45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/IconesTOS/Short Bow.png using Guid(69ed08aabf1e5904ca9716fb1fc3bf45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04afa1a925ee38b6b3f0c7ab88a8d061') in 0.015803 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 715.322425 seconds.
+  path: Assets/IconesTOS/Bow1.png
+  artifactKey: Guid(0c94b659a1ad5c74db918c719ceb57af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Bow1.png using Guid(0c94b659a1ad5c74db918c719ceb57af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5447784ad8bc58363b04a0073efd2a4') in 0.025378 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/IconesTOS/Short Bow.png
+  artifactKey: Guid(69ed08aabf1e5904ca9716fb1fc3bf45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Short Bow.png using Guid(69ed08aabf1e5904ca9716fb1fc3bf45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1cf54da8e0e244093e99af3821a64b9') in 0.022163 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 40.181030 seconds.
+  path: Assets/IconesTOS/Bow1.png
+  artifactKey: Guid(0c94b659a1ad5c74db918c719ceb57af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Bow1.png using Guid(0c94b659a1ad5c74db918c719ceb57af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bfcd31242591478eaa8a248453282bd') in 0.060403 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/IconesTOS/Short Bow.png
+  artifactKey: Guid(69ed08aabf1e5904ca9716fb1fc3bf45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Short Bow.png using Guid(69ed08aabf1e5904ca9716fb1fc3bf45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71723168642b80acf9ceee23f55b46a0') in 0.019728 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 134.681826 seconds.
+  path: Assets/IconesTOS/Bow1.png
+  artifactKey: Guid(0c94b659a1ad5c74db918c719ceb57af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Bow1.png using Guid(0c94b659a1ad5c74db918c719ceb57af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '973b09d1717587c5f4ac536bdcbf0e01') in 0.025537 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/IconesTOS/Orc Bow.png
+  artifactKey: Guid(b06a3aecffec5fc499bb8c96e0eaf687) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Orc Bow.png using Guid(b06a3aecffec5fc499bb8c96e0eaf687) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15abb3b9155c6b72e23a9f013ee33496') in 0.018331 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.911331 seconds.
+  path: Assets/IconesTOS/Bow1.png
+  artifactKey: Guid(0c94b659a1ad5c74db918c719ceb57af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Bow1.png using Guid(0c94b659a1ad5c74db918c719ceb57af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '802c759a9c61a4ed65135325caea29cb') in 0.026069 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/IconesTOS/Short Bow.png
+  artifactKey: Guid(69ed08aabf1e5904ca9716fb1fc3bf45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Short Bow.png using Guid(69ed08aabf1e5904ca9716fb1fc3bf45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '824d3dd8a69267bb0f5847d81cd82b70') in 0.019370 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.019720 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\jonat\Documents\DevGames\UnityProjects\Tool\Tool\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\jonat\Documents\DevGames\UnityProjects\Tool\Tool\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.94 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.565 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2567ms)
+		BeginReloadAssembly (268ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (12ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (68ms)
+		EndReloadAssembly (2092ms)
+			LoadAssemblies (184ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (549ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (138ms)
+			SetupLoadedEditorAssemblies (1033ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (50ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (196ms)
+				ProcessInitializeOnLoadAttributes (706ms)
+				ProcessInitializeOnLoadMethodAttributes (55ms)
+				AfterProcessingInitializeOnLoad (23ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (44ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.55 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5655 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 47 unused Assets / (3.7 MB). Loaded Objects now: 6856.
+Memory consumption went from 277.8 MB to 274.1 MB.
+Total: 10.560100 ms (FindLiveObjects: 0.946100 ms CreateObjectMapping: 0.361100 ms MarkObjects: 7.987700 ms  DeleteObjects: 1.262900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 770.693956 seconds.
+  path: Assets/IconesTOS/Blacksmith Hammer.png
+  artifactKey: Guid(c3047ffbe1fcf074ca6da9c20883da79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Blacksmith Hammer.png using Guid(c3047ffbe1fcf074ca6da9c20883da79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ed319d03992483f7cf0f456e7541749') in 0.070737 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.144490 seconds.
+  path: Assets/IconesTOS/Crystal Staff.png
+  artifactKey: Guid(219482f5ebcedf544b5ec0b1a8bb7df5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Crystal Staff.png using Guid(219482f5ebcedf544b5ec0b1a8bb7df5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c116c5351317fe2f377a4db68acedb68') in 0.026622 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/IconesTOS/Skinning Dagger.png
+  artifactKey: Guid(9d2aa5a412aaf5f41adfac414878941e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Skinning Dagger.png using Guid(9d2aa5a412aaf5f41adfac414878941e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d5519d122a220dbee7bb63e546b41b5') in 0.018072 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/IconesTOS/Pickaxe.png
+  artifactKey: Guid(4a994e357e0af004eaab3c4f819225ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Pickaxe.png using Guid(4a994e357e0af004eaab3c4f819225ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fef05e36ae410e23867baf53fb0e990') in 0.018901 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/IconesTOS/Short Bow.png
+  artifactKey: Guid(69ed08aabf1e5904ca9716fb1fc3bf45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Short Bow.png using Guid(69ed08aabf1e5904ca9716fb1fc3bf45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '993ac4143a358006ec4b7c486cde47a4') in 0.012865 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/IconesTOS/Woodcutter Axe.png
+  artifactKey: Guid(abd31d3c0f4cf9d4586c9ac7c4e7bdcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Woodcutter Axe.png using Guid(abd31d3c0f4cf9d4586c9ac7c4e7bdcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4072f88d205e3ae348ba1ae75162a31f') in 0.020074 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/IconesTOS/Human Slayer.png
+  artifactKey: Guid(893ea87d8eee1274f8d0404e5f9ac70f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/IconesTOS/Human Slayer.png using Guid(893ea87d8eee1274f8d0404e5f9ac70f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9007f4a01711e6ad6e6766ec07e18f89') in 0.015154 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
