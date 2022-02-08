@@ -315,3 +315,7 @@ Received Import Request.
   path: Assets/IconesTOS/Bow1.png
   artifactKey: Guid(0c94b659a1ad5c74db918c719ceb57af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/IconesTOS/Bow1.png using Guid(0c94b659a1ad5c74db918c719ceb57af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b44098713dad05626a03c613eff5b5ab') in 0.028134 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
