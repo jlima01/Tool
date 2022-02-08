@@ -11,18 +11,25 @@ public class ScreenShoot : MonoBehaviour
 	private Transform spawn;
     public IEnumerator CreatePicture()
     {
+		// Esperar recursos serem desenhados na tela
+
     	yield return new WaitForEndOfFrame();
 
-		if(cameraWidth > cameraHeight)
+		// Caso opte por manter a resolução quadrada
+
+		/* if(cameraWidth > cameraHeight)
 		{
 			clipX = cameraWidth - cameraHeight;
 		}
 		else if(cameraHeight > cameraWidth)
 		{
 			clipY = cameraHeight - cameraWidth;
-		}
+		} */
 
     	//Texture2D texture = new Texture2D(cameraWidth - clipX, cameraHeight - clipY, TextureFormat.RGBA32, true); 
+
+		//criar textura e limpar os pixels para fundo transparente
+
 		Texture2D texture = new Texture2D(width, height, TextureFormat.RGBA32, true); 
 		
 		for (int y = 0; y < texture.height; y++) {
@@ -35,9 +42,14 @@ public class ScreenShoot : MonoBehaviour
  
         texture.Apply();
 
+		//Preencher pixels com captura da camera
+
     	//texture.ReadPixels(new Rect(0, 0, cameraWidth, cameraHeight), 0, 0);
+		
 		texture.ReadPixels(new Rect((cameraWidth - width)/2, (cameraHeight - height)/2, cameraWidth, cameraHeight), 0, 0);
     	texture.Apply();
+		
+		//Salvar imagem em png em pasta escolhida se existir
 
     	byte[] bytes = texture.EncodeToPNG();
 		
@@ -53,6 +65,8 @@ public class ScreenShoot : MonoBehaviour
 		}
 
     	DestroyImmediate(texture);
+
+		//Destruir objeto criado
 
 		if(spawn.transform.GetChild(0).gameObject != null)
 		{
