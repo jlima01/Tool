@@ -10,7 +10,7 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 	public static ItemType itemType;
 	public int width, height;
 	public float margin = 1, camPos = -3;
-	float counter = 0, cameraPositionStaff = 1.75f, cameraPositionSword = 2, cameraPositionTool = 1.5f, cameraPositionBow = 1.75f;//, counter = 0;
+	float counter = 0, cameraPositionStaff = 1.75f, cameraPositionSword = 2, cameraPositionTool = 1.5f, cameraPositionBow = 1.75f;
 	int i = 0;
 	bool showBackgrounds = false, changeMode = false, buttomPressed = false;
 	public string nomeDaPasta = "IconesDosItens", prefabsPathName = "Items", pathName = "Items", swordPathName = "Items/Weapons/Two Hand Sword", toolsPathName = "Items/Weapons/Tools", staffPathName = "Items/Weapons/Staff", bowPathName = "Items/Weapons/Bow";
@@ -35,6 +35,8 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
     }
 	public void Update()
 	{
+        //Automatizar o processo de geração de imagens(Basta apertar o botão uma vez).
+
 		if(buttomPressed)
 		{
 			if(counter == 0)
@@ -446,6 +448,8 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 						//Camera.main.transform.position = new Vector3(mesh.bounds.center.x, mesh.bounds.center.y, -camPos);
 						Camera.main.transform.position = new Vector3(0, 0, -camPos);
 					}
+
+                    Camera.main.nearClipPlane = 0.3f;
 					
 				}
 				
