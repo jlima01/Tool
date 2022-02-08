@@ -10,9 +10,9 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 	public static ItemType itemType;
 	public int width, height;
 	public float margin = 1, camPos = -3;
-	float cameraPositionStaff = 1.75f, cameraPositionSword = 2, cameraPositionTool = 1.5f, cameraPositionBow = 1.75f;//, counter = 0;
+	float counter = 0, cameraPositionStaff = 1.75f, cameraPositionSword = 2, cameraPositionTool = 1.5f, cameraPositionBow = 1.75f;//, counter = 0;
 	int i = 0;
-	bool showBackgrounds = false, changeMode = false;
+	bool showBackgrounds = false, changeMode = false, buttomPressed = false;
 	public string nomeDaPasta = "IconesDosItens", prefabsPathName = "Items", pathName = "Items", swordPathName = "Items/Weapons/Two Hand Sword", toolsPathName = "Items/Weapons/Tools", staffPathName = "Items/Weapons/Staff", bowPathName = "Items/Weapons/Bow";
 	string itemId = "item";
 
@@ -33,6 +33,23 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 
         DrawVariables();
     }
+	public void Update()
+	{
+		if(buttomPressed)
+		{
+			if(counter == 0)
+			{
+				SpawnItems();
+			}
+
+			counter += Time.deltaTime;
+
+			if(counter >= 1)
+			{
+				counter = 0;	
+			}
+		}
+	}
 
 	#endregion
 
@@ -243,26 +260,29 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 
         EditorGUILayout.Space(16);
 
-        if (GUILayout.Button("Preencher Parâmetros"))
-        {
-            SetParameters();
-			SetPrefabs();
-        }
-
-		if (GUILayout.Button("Gerar Imagens"))
+        if(!buttomPressed)
 		{
-			SpawnItems();
+			if (GUILayout.Button("Preencher Parâmetros"))
+			{
+				SetParameters();
+				SetPrefabs();
+			}
+
+			if (GUILayout.Button("Gerar Imagens"))
+			{
+				buttomPressed = true;
+			}
+
+			if (GUILayout.Button("Resetar"))
+			{
+				Reset();
+			}
+
+			if (GUILayout.Button("Resetar Contador"))
+			{
+				ResetCounter();
+			}
 		}
-
-        if (GUILayout.Button("Resetar"))
-        {
-            Reset();
-        }
-
-		if (GUILayout.Button("Resetar Contador"))
-        {
-            ResetCounter();
-        }
 
         #endregion
 
@@ -430,6 +450,8 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 			if(i > itemsPrefabs.Length - 1)
 			{
 				i = 0;
+				buttomPressed = false;
+				counter = 0;
 			}
 		}
 		else
