@@ -9,8 +9,10 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 	public static Ajustment ajustment;
 	public static ItemType itemType;
 	public int width, height;
-	public float margin = 1, camPos = -3;
-	float counter = 0, cameraPositionStaff = 1.75f, cameraPositionSword = 2, cameraPositionTool = 1.5f, cameraPositionBow = 1.75f;
+	public float margin = 1;
+	float counter = 0;
+	Vector3 cameraPositionStaff, cameraPositionSword, cameraPositionTool, cameraPositionBow, camPos;
+	public Vector2 scrollPosition = Vector2.zero;
 	int i = 0;
 	bool showBackgrounds = false, changeMode = false, buttomPressed = false;
 	public string nomeDaPasta = "IconesDosItens", prefabsPathName = "Items", pathName = "Items", swordPathName = "Items/Weapons/Two Hand Sword", toolsPathName = "Items/Weapons/Tools", staffPathName = "Items/Weapons/Staff", bowPathName = "Items/Weapons/Bow";
@@ -29,6 +31,8 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 
     private void OnGUI()
     {
+		scrollPosition = GUI.BeginScrollView(new Rect(0, 0, 400, 500), scrollPosition, new Rect(0, 0, 500, 600), true, true);
+
         GUILayout.Label("Ferramenta De Captura", EditorStyles.boldLabel);
 
         DrawVariables();
@@ -51,6 +55,9 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 				counter = 0;	
 			}
 		}
+
+		if(ajustment == Ajustment.Manual)
+			Camera.main.transform.position = camPos;
 	}
 
 	#endregion
@@ -156,32 +163,57 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 		}
 		else
 		{
-			EditorGUILayout.BeginHorizontal();
+			
+			EditorGUILayout.Space(4);
 
 			GUILayout.Label("Posição da Camera", GUILayout.MaxWidth(125));
+
+			EditorGUILayout.Space(4);
+
+			EditorGUILayout.BeginHorizontal();
 
 			switch(itemType)
 			{
 				case ItemType.Bow:
-					cameraPositionBow = EditorGUILayout.Slider(cameraPositionBow, 0, 10, GUILayout.MaxWidth(125));
+					GUILayout.Label("X", GUILayout.MaxWidth(15));
+					cameraPositionBow.x = EditorGUILayout.Slider(cameraPositionBow.x, 0, 10, GUILayout.MaxWidth(125));
+					GUILayout.Label("Y", GUILayout.MaxWidth(15));
+					cameraPositionBow.y = EditorGUILayout.Slider(cameraPositionBow.y, 0, 10, GUILayout.MaxWidth(125));
+					GUILayout.Label("Z", GUILayout.MaxWidth(15));
+					cameraPositionBow.z = EditorGUILayout.Slider(cameraPositionBow.z, 0, 10, GUILayout.MaxWidth(125));
 					camPos = cameraPositionBow;
 					pathName = bowPathName;
 				break;
 
 				case ItemType.Staff:
-					cameraPositionStaff = EditorGUILayout.Slider(cameraPositionStaff, 0, 10, GUILayout.MaxWidth(125));
+					GUILayout.Label("X", GUILayout.MaxWidth(15));
+					cameraPositionStaff.x = EditorGUILayout.Slider(cameraPositionStaff.x, 0, 10, GUILayout.MaxWidth(125));
+					GUILayout.Label("Y", GUILayout.MaxWidth(15));
+					cameraPositionStaff.y = EditorGUILayout.Slider(cameraPositionStaff.y, 0, 10, GUILayout.MaxWidth(125));
+					GUILayout.Label("Z", GUILayout.MaxWidth(15));
+					cameraPositionStaff.z = EditorGUILayout.Slider(cameraPositionStaff.z, 0, 10, GUILayout.MaxWidth(125));
 					camPos = cameraPositionStaff;
 					pathName = staffPathName;
 				break;
 
 				case ItemType.Sword:
-					cameraPositionSword = EditorGUILayout.Slider(cameraPositionSword, 0, 10, GUILayout.MaxWidth(125));
+					GUILayout.Label("X", GUILayout.MaxWidth(15));
+					cameraPositionSword.x = EditorGUILayout.Slider(cameraPositionSword.x, 0, 10, GUILayout.MaxWidth(125));
+					GUILayout.Label("Y", GUILayout.MaxWidth(15));
+					cameraPositionSword.y = EditorGUILayout.Slider(cameraPositionSword.y, 0, 10, GUILayout.MaxWidth(125));
+					GUILayout.Label("Z", GUILayout.MaxWidth(15));
+					cameraPositionSword.z = EditorGUILayout.Slider(cameraPositionSword.z, 0, 10, GUILayout.MaxWidth(125));
 					camPos = cameraPositionSword;
 					pathName = swordPathName;
 				break;
 
 				case ItemType.Tool:
-					cameraPositionTool = EditorGUILayout.Slider(cameraPositionTool, 0, 10, GUILayout.MaxWidth(125));
+					GUILayout.Label("X", GUILayout.MaxWidth(15));
+					cameraPositionTool.x = EditorGUILayout.Slider(cameraPositionTool.x, 0, 10, GUILayout.MaxWidth(125));
+					GUILayout.Label("Y", GUILayout.MaxWidth(15));
+					cameraPositionTool.y = EditorGUILayout.Slider(cameraPositionTool.y, 0, 10, GUILayout.MaxWidth(125));
+					GUILayout.Label("Z", GUILayout.MaxWidth(15));
+					cameraPositionTool.z = EditorGUILayout.Slider(cameraPositionTool.z, 0, 10, GUILayout.MaxWidth(125));
 					camPos = cameraPositionTool;
 					pathName = toolsPathName;
 				break;
@@ -270,19 +302,21 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 
         if(!buttomPressed)
 		{
-			if (GUILayout.Button("Gerar Imagens"))
+			if (GUILayout.Button("Gerar Imagens(Batch Mode)"))
 			{
 				buttomPressed = true;
+			}
+
+			if (GUILayout.Button("Gerar Imagens(Teste)"))
+			{
+				SpawnItems();
+				ResetCounter();
 			}
 
 			if (GUILayout.Button("Resetar"))
 			{
 				Reset();
 			}
-			/* if (GUILayout.Button("Resetar Contador"))
-			{
-				ResetCounter();
-			} */
 		}
 
         #endregion
@@ -294,6 +328,8 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
         GUILayout.Label("Ferramenta desenvolvida por:  Jônatas Lima");
 
         #endregion
+
+		GUI.EndScrollView();
     }
 
 	#endregion
@@ -325,10 +361,10 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 		}
 		
 		margin = 2.5f;
-		cameraPositionBow = 4;
-		cameraPositionStaff = 4;
-		cameraPositionSword = 4;
-		cameraPositionTool = 4;
+		cameraPositionBow.x = 4;
+		cameraPositionStaff.x = 4;
+		cameraPositionSword.x = 4;
+		cameraPositionTool.x = 4;
 		ajustment = Ajustment.Automatico;
 		width = 1024;
 		height = 1024;
@@ -439,14 +475,14 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 						Mesh mesh = item.GetComponentInChildren<MeshFilter>().sharedMesh;
 
 						//Camera.main.transform.position = new Vector3(mesh.bounds.center.x, mesh.bounds.center.y, -camPos);
-						Camera.main.transform.position = new Vector3(0, 0, -camPos);
+						Camera.main.transform.position = new Vector3(camPos.x, camPos.y, -camPos.z);
 					}
 					else if(item.GetComponentInChildren<SkinnedMeshRenderer>() != null)
 					{
 						Mesh mesh = item.GetComponentInChildren<SkinnedMeshRenderer>().sharedMesh;
 
 						//Camera.main.transform.position = new Vector3(mesh.bounds.center.x, mesh.bounds.center.y, -camPos);
-						Camera.main.transform.position = new Vector3(0, 0, -camPos);
+						Camera.main.transform.position = new Vector3(camPos.x, camPos.y, -camPos.z);
 					}
 
                     Camera.main.nearClipPlane = 0.3f;
@@ -505,7 +541,7 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 		camera = null;
 		spawn = null;
 		ajustment = Ajustment.Automatico;
-		camPos = 0;
+		camPos = new Vector3(0, 0, -3);
 		
 		if(GameObject.FindGameObjectWithTag("Spawn") != null)
 		{
