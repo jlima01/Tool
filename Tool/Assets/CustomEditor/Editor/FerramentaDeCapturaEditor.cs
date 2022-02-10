@@ -31,7 +31,7 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 
     private void OnGUI()
     {
-		scrollPosition = GUI.BeginScrollView(new Rect(0, 0, 400, 500), scrollPosition, new Rect(0, 0, 500, 600), true, true);
+		scrollPosition = GUI.BeginScrollView(new Rect(0, 0, 400, 500), scrollPosition, new Rect(0, 0, 500, 800), true, true);
 
         GUILayout.Label("Ferramenta De Captura", EditorStyles.boldLabel);
 
@@ -176,44 +176,44 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 			{
 				case ItemType.Bow:
 					GUILayout.Label("X", GUILayout.MaxWidth(15));
-					cameraPositionBow.x = EditorGUILayout.Slider(cameraPositionBow.x, 0, 10, GUILayout.MaxWidth(125));
+					cameraPositionBow.x = EditorGUILayout.Slider(cameraPositionBow.x, -10, 10, GUILayout.MaxWidth(125));
 					GUILayout.Label("Y", GUILayout.MaxWidth(15));
-					cameraPositionBow.y = EditorGUILayout.Slider(cameraPositionBow.y, 0, 10, GUILayout.MaxWidth(125));
+					cameraPositionBow.y = EditorGUILayout.Slider(cameraPositionBow.y, -10, 10, GUILayout.MaxWidth(125));
 					GUILayout.Label("Z", GUILayout.MaxWidth(15));
-					cameraPositionBow.z = EditorGUILayout.Slider(cameraPositionBow.z, 0, 10, GUILayout.MaxWidth(125));
+					cameraPositionBow.z = EditorGUILayout.Slider(cameraPositionBow.z, -10, 10, GUILayout.MaxWidth(125));
 					camPos = cameraPositionBow;
 					pathName = bowPathName;
 				break;
 
 				case ItemType.Staff:
 					GUILayout.Label("X", GUILayout.MaxWidth(15));
-					cameraPositionStaff.x = EditorGUILayout.Slider(cameraPositionStaff.x, 0, 10, GUILayout.MaxWidth(125));
+					cameraPositionStaff.x = EditorGUILayout.Slider(cameraPositionStaff.x, -10, 10, GUILayout.MaxWidth(125));
 					GUILayout.Label("Y", GUILayout.MaxWidth(15));
-					cameraPositionStaff.y = EditorGUILayout.Slider(cameraPositionStaff.y, 0, 10, GUILayout.MaxWidth(125));
+					cameraPositionStaff.y = EditorGUILayout.Slider(cameraPositionStaff.y, -10, 10, GUILayout.MaxWidth(125));
 					GUILayout.Label("Z", GUILayout.MaxWidth(15));
-					cameraPositionStaff.z = EditorGUILayout.Slider(cameraPositionStaff.z, 0, 10, GUILayout.MaxWidth(125));
+					cameraPositionStaff.z = EditorGUILayout.Slider(cameraPositionStaff.z, -10, 10, GUILayout.MaxWidth(125));
 					camPos = cameraPositionStaff;
 					pathName = staffPathName;
 				break;
 
 				case ItemType.Sword:
 					GUILayout.Label("X", GUILayout.MaxWidth(15));
-					cameraPositionSword.x = EditorGUILayout.Slider(cameraPositionSword.x, 0, 10, GUILayout.MaxWidth(125));
+					cameraPositionSword.x = EditorGUILayout.Slider(cameraPositionSword.x, -10, 10, GUILayout.MaxWidth(125));
 					GUILayout.Label("Y", GUILayout.MaxWidth(15));
-					cameraPositionSword.y = EditorGUILayout.Slider(cameraPositionSword.y, 0, 10, GUILayout.MaxWidth(125));
+					cameraPositionSword.y = EditorGUILayout.Slider(cameraPositionSword.y, -10, 10, GUILayout.MaxWidth(125));
 					GUILayout.Label("Z", GUILayout.MaxWidth(15));
-					cameraPositionSword.z = EditorGUILayout.Slider(cameraPositionSword.z, 0, 10, GUILayout.MaxWidth(125));
+					cameraPositionSword.z = EditorGUILayout.Slider(cameraPositionSword.z, -10, 10, GUILayout.MaxWidth(125));
 					camPos = cameraPositionSword;
 					pathName = swordPathName;
 				break;
 
 				case ItemType.Tool:
 					GUILayout.Label("X", GUILayout.MaxWidth(15));
-					cameraPositionTool.x = EditorGUILayout.Slider(cameraPositionTool.x, 0, 10, GUILayout.MaxWidth(125));
+					cameraPositionTool.x = EditorGUILayout.Slider(cameraPositionTool.x, -10, 10, GUILayout.MaxWidth(125));
 					GUILayout.Label("Y", GUILayout.MaxWidth(15));
-					cameraPositionTool.y = EditorGUILayout.Slider(cameraPositionTool.y, 0, 10, GUILayout.MaxWidth(125));
+					cameraPositionTool.y = EditorGUILayout.Slider(cameraPositionTool.y, -10, 10, GUILayout.MaxWidth(125));
 					GUILayout.Label("Z", GUILayout.MaxWidth(15));
-					cameraPositionTool.z = EditorGUILayout.Slider(cameraPositionTool.z, 0, 10, GUILayout.MaxWidth(125));
+					cameraPositionTool.z = EditorGUILayout.Slider(cameraPositionTool.z, -10, 10, GUILayout.MaxWidth(125));
 					camPos = cameraPositionTool;
 					pathName = toolsPathName;
 				break;
@@ -475,14 +475,14 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 						Mesh mesh = item.GetComponentInChildren<MeshFilter>().sharedMesh;
 
 						//Camera.main.transform.position = new Vector3(mesh.bounds.center.x, mesh.bounds.center.y, -camPos);
-						Camera.main.transform.position = new Vector3(camPos.x, camPos.y, -camPos.z);
+						Camera.main.transform.position = new Vector3(camPos.x, camPos.y, camPos.z);
 					}
 					else if(item.GetComponentInChildren<SkinnedMeshRenderer>() != null)
 					{
 						Mesh mesh = item.GetComponentInChildren<SkinnedMeshRenderer>().sharedMesh;
 
 						//Camera.main.transform.position = new Vector3(mesh.bounds.center.x, mesh.bounds.center.y, -camPos);
-						Camera.main.transform.position = new Vector3(camPos.x, camPos.y, -camPos.z);
+						Camera.main.transform.position = new Vector3(camPos.x, camPos.y, camPos.z);
 					}
 
                     Camera.main.nearClipPlane = 0.3f;
