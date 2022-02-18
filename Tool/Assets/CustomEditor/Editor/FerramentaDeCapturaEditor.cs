@@ -31,7 +31,7 @@ public class FerramentaDeCapturaEditor : ScriptableWizard
 
     private void OnGUI()
     {
-		scrollPosition = GUI.BeginScrollView(new Rect(0, 0, 400, 500), scrollPosition, new Rect(0, 0, 500, 800), true, true);
+		scrollPosition = GUI.BeginScrollView(new Rect(0, 0, 600, 600), scrollPosition, new Rect(0, 0, 800, 800), true, true);
 
         GUILayout.Label("Ferramenta De Captura", EditorStyles.boldLabel);
 
